@@ -1,68 +1,118 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title>Eclipse</title>
-	<link rel="stylesheet" type="text/css" href="homestyles.css"/>
-	<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Kaushan+Script|Raleway|Shadows+Into+Light+Two" rel="stylesheet">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-	<div id=nav>
-		<div id=logo>
-			<a href="index.html">Eclipse</a>
-			<p>Now is the best time to start talking</p>
-		</div>
-		<div class="clear"></div>
-	</div>
-	<div id="hero">
-		<div id="message">
-			<p id="submessage">Have you ever wanted to<br/></p>
-			<p id="mainmessage">Learn a Language?</p>
-		</div>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Montserrat|Raleway|Righteous" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <style>
+      :root {
+        --main-color: #cbf6fa;
+        --secondary-color: #433d87;
+      }
 
-		<div id="paths">
-			<div class="pathitem">
-				<a href="whybother.html" id="a">Why Bother?</a>
-			</div>
-			<div class="pathitem">
-				<a href="how.html" id="b">How?</a>
-			</div>
-			<div class="pathitem" id="c">
-				<a href="motivated.html">Staying Motivated</a>
-			</div>
-			<div class="pathitem" id="d">
-				<a href="tips.html">Tips &amp; Tricks</a>
-			</div>
-			<div class=clear></div>
-		</div>
-	</div>
+      body {
+        background-color: var(--main-color);
+      }
 
-	<div id=content>
-		<div id="content-title">
-			Why Choose the Eclipse Method
-		</div>
-			<p>At some point our lives, most of us have wanted to learn a language
-			but unfortunately, most of us fell victim to these myths:</p> 
-			<ul>
-				<li>Only kids can learn languages</li>
-				<li>You can't work full time and learn a language</li>
-				<li>I've already spent years in high school and in college 
-					trying to learn this language, but I'm still not fluent</li> 
-				<li>I don't have the "language gene"</li>
-			</ul>
+      a:hover {
+        text-decoration: none;
+        color: var(--secondary-color);
+      }
 
-			<p>Fortunately,
-			none of these myths are accurate.  Learning a language is more a matter 
-			of better organizing one's time with the tips I give you on this site and finding the right resources to design a learning style unique 
-			to you.  </p>
+      #mainContainer {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        font-family: 'Raleway', cursive;
+      }
 
-			<p>This website will guide you to meet these goals and help you achieve
-			your language learning dreams.</p>
-		</div>
-	</div>
+      #title {
+        text-align: center;
+        font-size: 40px;
+        font-family: 'Architects Daughter', cursive;
+        margin: 20px 0 20px 0;
+      }
 
-	<div id=copyright>
-		&#9400; Eclipse Method 2018
-	</div>
-</body>
+      #projectListingTitle {
+        font-family: 'Architects Daughter', cursive;
+        font-size: 30px;
+      }
+
+      .card {
+        padding: 0;
+        margin: 10px;
+      }
+
+      .card-body {
+        position: relative;
+      }
+
+      .card-text {
+        padding-bottom: 2rem;
+      }
+
+      .projectImg {
+        height: 12rem;
+        overflow: hidden;
+      }
+
+      .btn-redirect {
+        background-color: var(--main-color);
+        position: absolute;
+        bottom: 1rem;
+        right: 1rem;
+      }
+
+      .btn-redirect:hover {
+        background-color: var(--secondary-color);
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="mainContainer">
+      <div id="title">Juliette Chirol Hill</div>
+      <hr/>
+      <div id="projectListing">
+        <div id="projectListingTitle">Some Projects</div>
+        <div class="row">
+          <div class="card col-sm">
+            <div class="projectImg">
+              <img src="SRSHome.png" class="card-img-top" alt="Spaced Repetition Scheduler">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title"><a href="https://github.com/JChirolHill/SpacedRepetitionSchedule">Spaced Repetition Scheduler</a></h5>
+              <p class="card-text">Generates a schedule of when to review for certain classes according to research on memory for optimal memory results.</p>
+              <a href="SpacedRepetition/index.html" class="btn btn-redirect">Demo</a>
+            </div>
+          </div>
+          <div class="card col-sm">
+            <div class="projectImg">
+              <img src="WeFood.png" class="card-img-top" alt="WeFood">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title"><a href="https://github.com/neutonfoo/wefood">WeFood</a></h5>
+              <p class="card-text">Stop wasting time to decide where to eat.  WeFood finds nearby restaurants and allows friends to vote on where to go.</p>
+              <a href="http://wefood.fuzzicode.com" class="btn btn-redirect">Demo</a>
+            </div>
+          </div>
+          <div class="card col-sm">
+            <div class="projectImg">
+              <img src="EclipseHome.png" class="card-img-top" alt="Eclipse Method">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title"><a href="https://github.com/JChirolHill/Eclipse">Eclipse Method</a></h5>
+              <p class="card-text">An effective method for language learning based on cognitive science research with plenty of tips.</p>
+              <a href="Eclipse/index.html" class="btn btn-redirect">Demo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

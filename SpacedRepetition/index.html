@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Montserrat|Raleway|Righteous" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Spaced Repetition Schedule Generator</title>
+  </head>
+  <body>
+      <ul class="nav justify-content-end">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Create</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="science.html">Science</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="examples.html">Examples</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="guide.html">Quick Guide</a>
+        </li>
+      </ul>
+
+    <div id="mainContainer">
+      <div id="title">Spaced Repetition Schedule Generator</div>
+      <!-- enter all the classes by day -->
+      <div id="step1">
+        <div class="instructions">
+          <p>Start by entering which classes you have on which days.<br/>
+            Then press the Generate button below.</p>
+        </div>
+        <div class="accordion" id="inputClasses"></div>
+        <div id="generate">
+          <button type="submit" id="generateSRRBtn" class="btn colorBtn">Generate Schedule</button>
+        </div>
+      </div>
+
+      <!-- generate the table from the data in step 1 -->
+      <div id="step2">
+        <div class="instructions">
+          <p>Below is your Spaced Repetition Review Schedule.<br/>
+            A blue background means you learned this material <span style="color: #35b3e4;">1 day ago</span>.<br/>
+            A green background means you learned this material <span style="color: #218f5f;">3 days ago</span>.<br/>
+            A red background means you learned this material <span style="color: #ab0000;">6 days ago</span>.<br/>
+          </p>
+        </div>
+        <div id="srrListing">
+          <div id="weekdays" class="row"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="jqueryScripts.js"></script>
+  </body>
+</html>
