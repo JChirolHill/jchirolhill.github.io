@@ -33,9 +33,13 @@
 
       #title {
         text-align: center;
-        font-size: 40px;
         font-family: 'Raleway', cursive;
         margin: 20px 0 20px 0;
+      }
+
+      #name {
+        font-size: 40px;
+        font-weight: bold;
       }
 
       #projectListingTitle {
@@ -76,11 +80,24 @@
   </head>
   <body>
     <div id="mainContainer">
-      <div id="title">Juliette Chirol Hill</div>
+      <div id="title">
+        <div id="name">Juliette Chirol Hill</div>
+        <div id="email"><a href="mailto:chirolhi@usc.edu" target="_top">chirolhi@usc.edu</a></div>
+      </div>
       <hr/>
       <div id="projectListing">
         <div id="projectListingTitle">Some Projects</div>
         <div class="row">
+          <div class="card col-sm">
+            <div class="projectImg">
+              <a href="https://salhacks.com/memorylane"><img src="MemLane.png" class="card-img-top" alt="Memory Lane"/></a>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title"><a href="https://github.com/neutonfoo/memorylane">Memory Lane</a></h5>
+              <p class="card-text">Create and complete scavenger hunts near you.  Experience the world in a whole new way.</p>
+              <a href="https://salhacks.com/memorylane" class="btn btn-redirect">Demo</a>
+            </div>
+          </div>
           <div class="card col-sm">
             <div class="projectImg">
               <a href="SpacedRepetition/index.html"><img src="SRSHome.png" class="card-img-top" alt="Spaced Repetition Scheduler"/></a>
@@ -93,14 +110,16 @@
           </div>
           <div class="card col-sm">
             <div class="projectImg">
-              <a href="http://wefood.fuzzicode.com"><img src="WeFood.png" class="card-img-top" alt="WeFood"/></a>
+              <a href="http://salhacks.com/wefood"><img src="WeFood.png" class="card-img-top" alt="WeFood"/></a>
             </div>
             <div class="card-body">
               <h5 class="card-title"><a href="https://github.com/neutonfoo/wefood">WeFood</a></h5>
               <p class="card-text">Stop wasting time to decide where to eat.  WeFood finds nearby restaurants and allows friends to vote on where to go.</p>
-              <a href="http://wefood.fuzzicode.com" class="btn btn-redirect">Demo</a>
+              <a href="http://salhacks.com/wefood" class="btn btn-redirect">Demo</a>
             </div>
           </div>
+        </div>
+        <div class="row">
           <div class="card col-sm">
             <div class="projectImg">
               <a href="Eclipse/index.html"><img src="EclipseHome.png" class="card-img-top" alt="Eclipse Method"/></a>
@@ -111,6 +130,8 @@
               <a href="Eclipse/index.html" class="btn btn-redirect">Demo</a>
             </div>
           </div>
+          <div class="col-sm"></div>
+          <div class="col-sm"></div>
         </div>
       </div>
     </div>
