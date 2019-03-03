@@ -47,17 +47,25 @@
         font-size: 30px;
       }
 
+      .cardContainer {
+        padding: 10px;
+        box-sizing: border-box;
+      }
+
       .card {
         padding: 0;
-        margin: 10px;
       }
 
       .card-body {
         position: relative;
+        padding-bottom: 3rem;
       }
 
       .card-text {
-        padding-bottom: 2rem;
+      }
+
+      .hackathon-text {
+        color: grey;
       }
 
       .projectImg {
@@ -67,14 +75,23 @@
 
       .btn-redirect {
         background-color: var(--main-color);
-        position: absolute;
-        bottom: 1rem;
-        right: 1rem;
       }
 
       .btn-redirect:hover {
         background-color: var(--secondary-color);
         color: white;
+      }
+
+      .demoBtn {
+        position: absolute;
+        bottom: 1rem;
+        right: 1rem;
+      }
+
+      .devPostBtn {
+        position: absolute;
+        bottom: 1rem;
+        left: 1rem;
       }
     </style>
   </head>
@@ -88,51 +105,74 @@
       <div id="projectListing">
         <div id="projectListingTitle">Some Projects</div>
         <div class="row">
-          <div class="card col-sm">
-            <div class="projectImg">
-              <a href="https://salhacks.com/memorylane"><img src="MemLane.png" class="card-img-top" alt="Memory Lane"/></a>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title"><a href="https://github.com/neutonfoo/memorylane">Memory Lane</a></h5>
-              <p class="card-text">Create and complete scavenger hunts near you.  Experience the world in a whole new way.</p>
-              <a href="https://salhacks.com/memorylane" class="btn btn-redirect">Demo</a>
-            </div>
-          </div>
-          <div class="card col-sm">
-            <div class="projectImg">
-              <a href="SpacedRepetition/index.html"><img src="SRSHome.png" class="card-img-top" alt="Spaced Repetition Scheduler"/></a>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title"><a href="https://github.com/JChirolHill/SpacedRepetitionSchedule">Spaced Repetition Scheduler</a></h5>
-              <p class="card-text">Generates a schedule of when to review for certain classes according to research on memory for optimal memory results.</p>
-              <a href="SpacedRepetition/index.html" class="btn btn-redirect">Demo</a>
+          <div class="cardContainer col-sm-4">
+            <div class="card">
+              <div class="projectImg">
+                <a href="https://salhacks.com/ubershep"><img src="ubershep.png" class="card-img-top" alt="Uber Shep"/></a>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title"><a href="https://github.com/RobotPirate/UberShep">Uber Shep</a></h5>
+                <p class="card-text">Let UberShep guide you to your UberPool pickup spot!</p>
+                <p class="hackathon-text">Done at HackTech Spring 2019</p>
+                <a href="https://devpost.com/software/ubershep" class="btn btn-redirect devPostBtn">Devpost</a>
+                <a href="https://salhacks.com/ubershep" class="btn btn-redirect demoBtn">Demo</a>
+              </div>
             </div>
           </div>
-          <div class="card col-sm">
-            <div class="projectImg">
-              <a href="http://salhacks.com/wefood"><img src="WeFood.png" class="card-img-top" alt="WeFood"/></a>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title"><a href="https://github.com/neutonfoo/wefood">WeFood</a></h5>
-              <p class="card-text">Stop wasting time to decide where to eat.  WeFood finds nearby restaurants and allows friends to vote on where to go.</p>
-              <a href="http://salhacks.com/wefood" class="btn btn-redirect">Demo</a>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="card col-sm">
-            <div class="projectImg">
-              <a href="Eclipse/index.html"><img src="EclipseHome.png" class="card-img-top" alt="Eclipse Method"/></a>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title"><a href="https://github.com/JChirolHill/Eclipse">Eclipse Method</a></h5>
-              <p class="card-text">An effective method for language learning based on cognitive science research with plenty of tips.</p>
-              <a href="Eclipse/index.html" class="btn btn-redirect">Demo</a>
+          <div class="cardContainer col-sm-4">
+            <div class="card">
+              <div class="projectImg">
+                <a href="https://salhacks.com/memorylane"><img src="MemLane.png" class="card-img-top" alt="Memory Lane"/></a>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title"><a href="https://github.com/neutonfoo/memorylane">Memory Lane</a></h5>
+                <p class="card-text">Create and complete scavenger hunts near you.  Experience the world in a whole new way.</p>
+                <p class="hackathon-text">Done at SB Hacks Spring 2019</p>
+                <a href="https://devpost.com/software/memory-lane-x9uapb" class="btn btn-redirect devPostBtn">Devpost</a>
+                <a href="https://salhacks.com/memorylane" class="btn btn-redirect demoBtn">Demo</a>
+              </div>
             </div>
           </div>
-          <div class="col-sm"></div>
-          <div class="col-sm"></div>
-        </div>
+          <div class="cardContainer col-sm-4">
+            <div class="card">
+              <div class="projectImg">
+                <a href="SpacedRepetition/index.html"><img src="SRSHome.png" class="card-img-top" alt="Spaced Repetition Scheduler"/></a>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title"><a href="https://github.com/JChirolHill/SpacedRepetitionSchedule">Spaced Repetition Scheduler</a></h5>
+                <p class="card-text">Generates a schedule of when to review for certain classes according to research on memory for optimal memory results.</p>
+                <a href="SpacedRepetition/index.html" class="btn btn-redirect demoBtn">Demo</a>
+              </div>
+            </div>
+          </div>
+          <div class="cardContainer col-sm-4">
+            <div class="card">
+              <div class="projectImg">
+                <a href="http://salhacks.com/wefood"><img src="WeFood.png" class="card-img-top" alt="WeFood"/></a>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title"><a href="https://github.com/neutonfoo/wefood">WeFood</a></h5>
+                <p class="card-text">Stop wasting time to decide where to eat.  WeFood finds nearby restaurants and allows friends to vote on where to go.</p>
+                <p class="hackathon-text">Done at TrojanHacks Fall 2018</p>
+                <a href="https://devpost.com/software/wefood" class="btn btn-redirect devPostBtn">Devpost</a>
+                <a href="http://salhacks.com/wefood" class="btn btn-redirect demoBtn">Demo</a>
+              </div>
+            </div>
+          </div>
+          <div class="cardContainer col-sm-4">
+            <div class="card">
+              <div class="projectImg">
+                <a href="Eclipse/index.html"><img src="EclipseHome.png" class="card-img-top" alt="Eclipse Method"/></a>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title"><a href="https://github.com/JChirolHill/Eclipse">Eclipse Method</a></h5>
+                <p class="card-text">An effective method for language learning based on cognitive science research with plenty of tips.</p>
+                <p class="hackathon-text">Done at TrojanHacks Spring 2018</p>
+                <a href="https://devpost.com/software/eclipse-hts58i" class="btn btn-redirect devPostBtn">Devpost</a>
+                <a href="Eclipse/index.html" class="btn btn-redirect demoBtn">Demo</a>
+              </div>
+            </div>
+          </div>
       </div>
     </div>
   </body>
