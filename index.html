@@ -15,7 +15,13 @@
         --secondary-color: #433d87;
       }
 
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+
       body {
+        /* background-color: white; */
         background-color: var(--main-color);
       }
 
@@ -29,12 +35,14 @@
         margin-left: auto;
         margin-right: auto;
         font-family: 'Raleway', cursive;
+        border-top: solid grey 1px;
       }
 
       #title {
         text-align: center;
         font-family: 'Raleway', cursive;
         margin: 20px 0 20px 0;
+        width: 100%;
       }
 
       #name {
@@ -54,6 +62,7 @@
 
       .card {
         padding: 0;
+        border: none;
       }
 
       .card-body {
@@ -70,8 +79,21 @@
 
       .projectImg {
         height: 12rem;
+        transition: height 1s;
         overflow: hidden;
       }
+
+      .projectImg:hover {
+        height: 13rem;
+      }
+
+      /* .projectImg img {
+        transition: transform 1s;
+      }
+
+      .projectImg img:hover {
+        transform: scale(1.025);
+      } */
 
       .btn-redirect {
         background-color: var(--main-color);
@@ -96,12 +118,11 @@
     </style>
   </head>
   <body>
+    <div id="title">
+      <div id="name">Juliette Chirol Hill</div>
+      <div id="email"><a href="mailto:chirolhi@usc.edu" target="_top">chirolhi@usc.edu</a></div>
+    </div>
     <div id="mainContainer">
-      <div id="title">
-        <div id="name">Juliette Chirol Hill</div>
-        <div id="email"><a href="mailto:chirolhi@usc.edu" target="_top">chirolhi@usc.edu</a></div>
-      </div>
-      <hr/>
       <div id="projectListing">
         <div id="projectListingTitle">Some Projects</div>
         <div class="row">
