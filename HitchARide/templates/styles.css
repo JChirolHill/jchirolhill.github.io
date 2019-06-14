@@ -58,12 +58,13 @@ label {
   padding-top: 50px;
 }
 
-.btn-secondary {
+.btn-secnd {
   background-color: var(--secondary);
   border: none;
   color: white;
 }
 
-.btn-secondary:hover {
+.btn-secnd:hover {
   background-color: var(--secondary-light);
+  color: white;
 }
