@@ -11,8 +11,12 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
     <style>
       :root {
-        --main-color: #cbf6fa;
+        --main-color: #9cd6cf;
+        --main-dark: #74bdb4;
+        --main-darker: #3f8f86;
         --secondary-color: #433d87;
+        --ternary-color: #2da395;
+        --back-grey: #c5d6d3;
       }
 
       html, body {
@@ -22,55 +26,75 @@
 
       body {
         /* background-color: white; */
-        background-color: var(--main-color);
+        /* background-color: var(--main-color); */
+        font-family: 'Raleway', cursive;
+        /* background-color: var(--back-grey); */
+        background-color: #f7fffe;
+      }
+
+      a {
+        transition: all 0.25s;
+        color: var(--main-darker);
       }
 
       a:hover {
         text-decoration: none;
-        color: var(--secondary-color);
+        color: var(--main-dark);
       }
 
-      #mainContainer {
-        width: 80%;
-        margin-left: auto;
-        margin-right: auto;
-        font-family: 'Raleway', cursive;
-        border-top: solid grey 1px;
-      }
-
-      #title {
-        text-align: center;
-        font-family: 'Raleway', cursive;
-        margin: 20px 0 20px 0;
+      #header {
+        position: relative;
+        height: 300px;
         width: 100%;
       }
 
+      #header img {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+      }
+
+      #header .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0) 60%, rgba(0,0,0,0.8) 100%);
+      }
+
+      #title {
+        font-family: 'Raleway', cursive;
+        padding: 130px 0 0 170px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: white;
+        text-shadow: 2px 2px 20px #000;
+        transition: margin-left 1s;
+        display: none;
+      }
+
       #name {
-        font-size: 40px;
+        font-size: 55px;
         font-weight: bold;
       }
 
-      #projectListingTitle {
-        font-family: 'Architects Daughter', cursive;
-        font-size: 30px;
+      #email {
+        margin-top: -10px;
+        text-align: right;
       }
 
-      .cardContainer {
-        padding: 10px;
-        box-sizing: border-box;
+      #email a {
+        color: white;
+        text-decoration: none;
       }
 
-      .card {
-        padding: 0;
-        border: none;
-      }
-
-      .card-body {
-        position: relative;
-        padding-bottom: 3rem;
-      }
-
-      .card-text {
+      #projectListing {
+        margin-top: 30px;
       }
 
       .hackathon-text {
@@ -78,149 +102,191 @@
       }
 
       .projectImg {
-        height: 12rem;
-        /* transition: height 0.5s; */
+        transition: all 0.5s;
         overflow: hidden;
       }
 
-      /* .projectImg:hover {
-        height: 13rem;
-      } */
-
-      /* .projectImg img {
-        transition: transform 1s;
+      .projectImg:hover {
+        transform: scale(1.025) translate(5px);
       }
-
-      .projectImg img:hover {
-        transform: scale(1.025);
-      } */
 
       .btn-redirect {
         background-color: var(--main-color);
       }
 
       .btn-redirect:hover {
-        background-color: var(--secondary-color);
+        background-color: var(--main-dark);
         color: white;
       }
 
       .demoBtn {
         position: absolute;
         bottom: 1rem;
-        right: 1rem;
+        right: 0;
+        color: white;
       }
 
       .devPostBtn {
         position: absolute;
         bottom: 1rem;
-        left: 1rem;
+        left: 0;
+        color: white;
+      }
+
+      .projectContainer {
+        background-color: white;
+        width: 100%;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        overflow: hidden;
+        /* border: solid var(--ternary-color) 1px; */
+        margin: 20px 0;
+        position: relative;
+        box-shadow: 5px 10px 20px var(--back-grey);
+      }
+
+      .projectContainer .projectImg {
+        padding: 0;
+        box-shadow: 5px 10px 20px;
+        max-height: 250px;
+        overflow: auto;
+      }
+
+      .projectContainer .projectImg img {
+        width: 100%;
+      }
+
+      .projectContainer .projectDescrSection {
+        width: 90%;
+        padding-top: 20px;
+        margin: 0 auto 0 auto;
+        height: 100%;
+        position: relative;
       }
     </style>
   </head>
   <body>
-    <div id="title">
-      <div id="name">Juliette Chirol Hill</div>
-      <div id="email"><a href="mailto:chirolhi@usc.edu" target="_top">chirolhi@usc.edu</a></div>
+    <div id="header">
+      <img src="IMG_4061.JPG" alt="Lake Image">
+      <div class="overlay"></div>
+      <div id="title">
+        <div id="name">Juliette Chirol Hill</div>
+          <div id="email"><a href="mailto:chirolhi@usc.edu" target="_top">chirolhi@usc.edu</a></div>
+        </div>
     </div>
-    <div id="mainContainer">
+
+    <div class="container">
       <div id="projectListing">
-        <div id="projectListingTitle">Some Projects</div>
-        <div class="row">
-          <div class="cardContainer col-12 col-sm-6 col-md-4">
-            <div class="card">
-              <div class="projectImg">
-                <a href="https://www.mshikepool.com"><img src="hikepool.png" class="card-img-top" alt="Hike Pool"/></a>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title"><a href="https://www.mshikepool.com">Hike Pool</a></h5>
-                <p class="card-text">Join and organize rides to hikes near you.</p>
-                <p class="hackathon-text">Created in Summer 2019</p>
-                <a href="https://www.mshikepool.com" class="btn btn-redirect demoBtn">Demo</a>
-              </div>
+        <div class="projectContainer row">
+          <div class="projectImg col-12 col-md-5">
+            <a href="https://www.mshikepool.com"><img src="hikepool.png" alt="Hike Pool"/></a>
+          </div>
+          <div class="col-12 col-md-7">
+            <div class="projectDescrSection">
+              <h5 class="projectTitle"><a href="https://www.mshikepool.com">Hike Pool</a></h5>
+              <p class="projectDescr">Join and organize rides to hikes near you.</p>
+              <p class="hackathon-text">Created in Summer 2019</p>
+              <a href="https://www.mshikepool.com" class="btn btn-redirect demoBtn">Demo</a>
             </div>
           </div>
-          <div class="cardContainer col-12 col-sm-6 col-md-4">
-            <div class="card">
-              <div class="projectImg">
-                <a href="https://github.com/JChirolHill/Word2Song"><img src="word2song.png" class="card-img-top" alt="Word2Song"/></a>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title"><a href="https://github.com/JChirolHill/Word2Song">Word2Song</a></h5>
-                <p class="card-text">Find songs containing vocab words in a language you are learning.</p>
-                <p class="hackathon-text">Created in Spring Break 2019</p>
-              </div>
+        </div>
+
+        <div class="projectContainer row">
+          <div class="projectImg col-12 col-md-5">
+            <a href="https://github.com/JChirolHill/Word2Song"><img src="word2song.png" alt="Word2Song"/></a>
+          </div>
+          <div class="col-12 col-md-7">
+            <div class="projectDescrSection">
+              <h5 class="projectTitle"><a href="https://github.com/JChirolHill/Word2Song">Word2Song</a></h5>
+              <p class="projectDescr">Find songs containing vocab words in a language you are learning.</p>
+              <p class="hackathon-text">Created in Spring Break 2019</p>
+              <a href="https://www.mshikepool.com" class="btn btn-redirect demoBtn">Demo</a>
             </div>
           </div>
-          <div class="cardContainer col-12 col-sm-6 col-md-4">
-            <div class="card">
-              <div class="projectImg">
-                <a href="https://salhacks.com/ubershep"><img src="ubershep.png" class="card-img-top" alt="Uber Shep"/></a>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title"><a href="https://github.com/RobotPirate/UberShep">Uber Shep</a></h5>
-                <p class="card-text">Let UberShep guide you to your UberPool pickup spot!</p>
-                <p class="hackathon-text">Created at HackTech Spring 2019</p>
-                <a href="https://devpost.com/software/ubershep" class="btn btn-redirect devPostBtn">Devpost</a>
-                <a href="https://salhacks.com/ubershep" class="btn btn-redirect demoBtn">Demo</a>
-              </div>
+        </div>
+
+        <div class="projectContainer row">
+          <div class="projectImg col-12 col-md-5">
+            <a href="https://salhacks.com/ubershep"><img src="ubershep.png" alt="Uber Shep"/></a>
+          </div>
+          <div class=" col-12 col-md-7">
+            <div class="projectDescrSection">
+              <h5 class="projectTitle"><a href="https://github.com/RobotPirate/UberShep">Uber Shep</a></h5>
+              <p class="projectDescr">Let UberShep guide you to your UberPool pickup spot!</p>
+              <p class="hackathon-text">Created at HackTech Spring 2019</p>
+              <a href="https://devpost.com/software/ubershep" class="btn btn-redirect devPostBtn">Devpost</a>
+              <a href="https://salhacks.com/ubershep" class="btn btn-redirect demoBtn">Demo</a>
             </div>
           </div>
-          <div class="cardContainer col-12 col-sm-6 col-md-4">
-            <div class="card">
-              <div class="projectImg">
-                <a href="https://salhacks.com/memorylane"><img src="MemLane.png" class="card-img-top" alt="Memory Lane"/></a>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title"><a href="https://github.com/neutonfoo/memorylane">Memory Lane</a></h5>
-                <p class="card-text">Create and complete scavenger hunts near you.  Experience the world in a whole new way.</p>
-                <p class="hackathon-text">Created at SB Hacks Spring 2019</p>
-                <a href="https://devpost.com/software/memory-lane-x9uapb" class="btn btn-redirect devPostBtn">Devpost</a>
-                <a href="https://salhacks.com/memorylane" class="btn btn-redirect demoBtn">Demo</a>
-              </div>
+        </div>
+
+        <div class="projectContainer row">
+          <div class="projectImg col-12 col-md-5">
+            <a href="https://salhacks.com/memorylane"><img src="MemLane.png" alt="Memory Lane"/></a>
+          </div>
+          <div class=" col-12 col-md-7">
+            <div class="projectDescrSection">
+              <h5 class="projectTitle"><a href="https://github.com/neutonfoo/memorylane">Memory Lane</a></h5>
+              <p class="projectDescr">Create and complete scavenger hunts near you.  Experience the world in a whole new way.</p>
+              <p class="hackathon-text">Created at SB Hacks Spring 2019</p>
+              <a href="https://devpost.com/software/memory-lane-x9uapb" class="btn btn-redirect devPostBtn">Devpost</a>
+              <a href="https://salhacks.com/memorylane" class="btn btn-redirect demoBtn">Demo</a>
             </div>
           </div>
-          <div class="cardContainer col-12 col-sm-6 col-md-4">
-            <div class="card">
-              <div class="projectImg">
-                <a href="SpacedRepetition/index.html"><img src="SRSHome.png" class="card-img-top" alt="Spaced Repetition Scheduler"/></a>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title"><a href="https://github.com/JChirolHill/SpacedRepetitionSchedule">Spaced Repetition Scheduler</a></h5>
-                <p class="card-text">Generates a schedule of when to review for certain classes according to research on memory for optimal memory results.</p>
-                <p class="hackathon-text">Created in Winter Break 2018</p>
-                <a href="SpacedRepetition/index.html" class="btn btn-redirect demoBtn">Demo</a>
-              </div>
+        </div>
+
+        <div class="projectContainer row">
+          <div class="projectImg col-12 col-md-5">
+            <a href="SpacedRepetition/index.html"><img src="SRSHome.png" alt="Spaced Repetition Scheduler"/></a>
+          </div>
+          <div class=" col-12 col-md-7">
+            <div class="projectDescrSection">
+              <h5 class="projectTitle"><a href="https://github.com/JChirolHill/SpacedRepetitionSchedule">Spaced Repetition Scheduler</a></h5>
+              <p class="projectDescr">Generates a schedule of when to review for certain classes according to research on memory for optimal memory results.</p>
+              <p class="hackathon-text">Created in Winter Break 2018</p>
+              <a href="SpacedRepetition/index.html" class="btn btn-redirect demoBtn">Demo</a>
             </div>
           </div>
-          <div class="cardContainer col-12 col-sm-6 col-md-4">
-            <div class="card">
-              <div class="projectImg">
-                <a href="http://salhacks.com/wefood"><img src="WeFood.png" class="card-img-top" alt="WeFood"/></a>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title"><a href="https://github.com/neutonfoo/wefood">WeFood</a></h5>
-                <p class="card-text">Stop wasting time to decide where to eat.  WeFood finds nearby restaurants and allows friends to vote on where to go.</p>
-                <p class="hackathon-text">Created at TrojanHacks Fall 2018</p>
-                <a href="https://devpost.com/software/wefood" class="btn btn-redirect devPostBtn">Devpost</a>
-                <a href="http://salhacks.com/wefood" class="btn btn-redirect demoBtn">Demo</a>
-              </div>
+        </div>
+
+        <div class="projectContainer row">
+          <div class="projectImg col-12 col-md-5">
+            <a href="http://salhacks.com/wefood"><img src="WeFood.png" alt="WeFood"/></a>
+          </div>
+          <div class=" col-12 col-md-7">
+            <div class="projectDescrSection">
+              <h5 class="projectTitle"><a href="https://github.com/neutonfoo/wefood">WeFood</a></h5>
+              <p class="projectDescr">Stop wasting time to decide where to eat.  WeFood finds nearby restaurants and allows friends to vote on where to go.</p>
+              <p class="hackathon-text">Created at TrojanHacks Fall 2018</p>
+              <a href="https://devpost.com/software/wefood" class="btn btn-redirect devPostBtn">Devpost</a>
+              <a href="http://salhacks.com/wefood" class="btn btn-redirect demoBtn">Demo</a>
             </div>
           </div>
-          <div class="cardContainer col-12 col-sm-6 col-md-4">
-            <div class="card">
-              <div class="projectImg">
-                <a href="Eclipse/index.html"><img src="EclipseHome.png" class="card-img-top" alt="Eclipse Method"/></a>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title"><a href="https://github.com/JChirolHill/Eclipse">Eclipse Method</a></h5>
-                <p class="card-text">An effective method for language learning based on cognitive science research with plenty of tips.</p>
-                <p class="hackathon-text">Created at TrojanHacks Spring 2018</p>
-                <a href="https://devpost.com/software/eclipse-hts58i" class="btn btn-redirect devPostBtn">Devpost</a>
-                <a href="Eclipse/index.html" class="btn btn-redirect demoBtn">Demo</a>
-              </div>
+        </div>
+
+        <div class="projectContainer row">
+          <div class="projectImg col-12 col-md-5">
+            <a href="Eclipse/index.html"><img src="EclipseHome.png" alt="Eclipse Method"/></a>
+          </div>
+          <div class=" col-12 col-md-7">
+            <div class="projectDescrSection">
+              <h5 class="projectTitle"><a href="https://github.com/JChirolHill/Eclipse">Eclipse Method</a></h5>
+              <p class="projectDescr">An effective method for language learning based on cognitive science research with plenty of tips.</p>
+              <p class="hackathon-text">Created at TrojanHacks Spring 2018</p>
+              <a href="https://devpost.com/software/eclipse-hts58i" class="btn btn-redirect devPostBtn">Devpost</a>
+              <a href="Eclipse/index.html" class="btn btn-redirect demoBtn">Demo</a>
             </div>
           </div>
+        </div>
       </div>
     </div>
+
+    <script src="jquery-3.4.1.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $("#title").fadeIn(300);
+        $("#title").css("margin-left", "10px")
+      });
+    </script>
   </body>
 </html>
