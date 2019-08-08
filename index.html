@@ -131,8 +131,7 @@
       .projectContainer {
         background-color: white;
         width: 100%;
-        border-top-right-radius: 10px;
-        border-bottom-right-radius: 10px;
+        border-radius: 0 10px 10px 0;
         overflow: hidden;
         margin: 20px 0;
         position: relative;
@@ -160,6 +159,46 @@
 
       .projectContainer .projectDescrSection .projectTitle {
         font-size: 25px;
+      }
+
+      @media (max-width: 768px) {
+        #name {
+          font-size: 45px;
+          font-weight: bold;
+        }
+
+        .projectContainer .projectImg {
+          box-shadow: 5px 10px 20px var(--back-grey);
+        }
+      }
+
+      @media (max-width: 576px) {
+        #title {
+          padding-left: 0;
+          left: 0;
+          right: 0;
+          text-align: center;
+        }
+
+        #name {
+          font-size: 45px;
+          font-weight: bold;
+        }
+
+        #email {
+          text-align: center;
+        }
+
+        .projectContainer {
+          border-radius: 0 0 10px 10px;
+        }
+
+        .hackathon-text {
+          padding-bottom: 6px;
+          text-align: center;
+        }
+
+
       }
     </style>
   </head>
@@ -212,7 +251,6 @@
                 <p>Javascript</p>
               </div>
               <p class="hackathon-text">Created in Spring Break 2019</p>
-              <a href="https://www.mshikepool.com" class="btn btn-redirect demoBtn">Demo</a>
             </div>
           </div>
         </div>
