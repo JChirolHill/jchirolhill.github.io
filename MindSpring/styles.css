@@ -1,0 +1,161 @@
+:root {
+  --bg: #BED1E8;
+  --main: #D9DBBC;
+  --main1: #CFA5B4;
+  --mypurple: #B2ABBF;
+  --mygreen: #ACBDBA;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg);
+  font-family: 'Chakra Petch', sans-serif;
+  margin: 0 20px;
+  font-size: 20px;
+}
+
+input {
+  padding: 10px;
+  outline: none;
+  border-radius: 10px;
+  border: 0;
+  text-align: center;
+  color: var(--mypurple);
+  font-size: 20px;
+  width: 40%;
+  margin-bottom: 30px;
+}
+
+input:focus {
+  outline: none;
+}
+
+img {
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  margin-bottom: -10px;
+}
+
+#part2 {
+  display: none;
+}
+#part3 {
+  display: none;
+}
+
+#big_title {
+  text-align: center;
+  font-family: "Roman";
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+  font-size: 30px;
+  text-shadow: 1px 1px 5px grey;
+}
+
+#big_title a {
+  color: white;
+  text-decoration: none;
+}
+
+.description {
+  text-align: center;
+  font-size: 20px;
+  color: black;
+  width: 70%;
+  margin: 0 auto;
+}
+
+#begin_button {
+  text-align: center;
+  font-size: 30px;
+  border-radius: 10px;
+  background-color: var(--mypurple);
+  color: #fff;
+  padding: 10px;
+  width: 4em;
+  margin: 0 auto;
+  transition: all 1s;
+}
+
+#begin_button:hover {
+  background-color: var(--mygreen);
+  cursor: pointer;
+}
+
+#user_input{
+  text-align: center;
+}
+
+#random_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.random_block {
+  width: 50%;
+  text-align: center;
+  margin: 0 10%;
+}
+
+.random_block .random_user img {
+  border-radius: 50%;
+}
+
+.rand_content {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px var(--mypurple);
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+#result {
+  text-align: center;
+}
+
+.random_block .description {
+  font-size: 25px;
+}
+
+#user_result {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#user_result div {
+  margin: 10px;
+  min-width: 20%;
+}
+
+@font-face {
+  src: url("RomanSD.ttf");
+  font-family: "Roman";
+}
+
+@media only screen and (max-width: 768px) {
+  .random_block {
+    margin: 0 10px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  #random_container {
+    display: block;
+  }
+
+  .random_block {
+    width: 90%;
+    margin-bottom: 10px;
+  }
+}
