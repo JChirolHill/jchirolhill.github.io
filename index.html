@@ -4,215 +4,23 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Juliette Chirol Hill</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Montserrat|Raleway|Righteous" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Montserrat|Raleway|Righteous" rel="stylesheet"/>
+    <link type="text/css" rel="stylesheet" href="styles.css"/>
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-    <style>
-      :root {
-        --main-color: #9cd6cf;
-        --main-dark: #74bdb4;
-        --main-darker: #3f8f86;
-        --back-grey: #c5d6d3;
-      }
 
-      html, body {
-        margin: 0;
-        padding: 0;
-      }
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-154692635-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-      body {
-        font-family: 'Raleway', cursive;
-        background-color: #f7fffe;
-      }
-
-      a {
-        transition: all 0.25s;
-        color: var(--main-darker);
-      }
-
-      a:hover {
-        text-decoration: none;
-        color: var(--main-dark);
-      }
-
-      #header {
-        position: relative;
-        height: 300px;
-        width: 100%;
-      }
-
-      #header img {
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-      }
-
-      #header .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0) 60%, rgba(0,0,0,0.8) 100%);
-      }
-
-      #title {
-        font-family: 'Raleway', cursive;
-        padding: 130px 0 0 170px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        color: white;
-        text-shadow: 2px 2px 20px #000;
-        transition: margin-left 1s;
-        display: none;
-      }
-
-      #name {
-        font-size: 55px;
-        font-weight: bold;
-      }
-
-      #email {
-        margin-top: -10px;
-        text-align: right;
-      }
-
-      #email a {
-        color: white;
-        text-decoration: none;
-      }
-
-      #projectListing {
-        margin-top: 30px;
-      }
-
-      .hackathon-text {
-        color: grey;
-      }
-
-      .projectImg {
-        transition: all 0.5s;
-        overflow: hidden;
-      }
-
-      .projectImg:hover {
-        transform: scale(1.025) translate(5px);
-      }
-
-      .btn-redirect {
-        background-color: var(--main-color);
-      }
-
-      .btn-redirect:hover {
-        background-color: var(--main-dark);
-        color: white;
-      }
-
-      .demoBtn {
-        position: absolute;
-        bottom: 1em;
-        right: 0;
-        color: white;
-      }
-
-      .devPostBtn {
-        position: absolute;
-        bottom: 1em;
-        left: 0;
-        color: white;
-      }
-
-      .projectContainer {
-        background-color: white;
-        width: 100%;
-        border-radius: 0 10px 10px 0;
-        overflow: hidden;
-        margin: 20px 0;
-        position: relative;
-        box-shadow: 5px 10px 20px var(--back-grey);
-      }
-
-      .projectContainer .projectImg {
-        padding: 0;
-        box-shadow: 5px 10px 20px;
-        max-height: 250px;
-        overflow: auto;
-      }
-
-      .projectContainer .projectImg img {
-        width: 100%;
-      }
-
-      .projectContainer .projectDescrSection {
-        width: 90%;
-        padding-top: 20px;
-        margin: 0 auto 0 auto;
-        height: 100%;
-        position: relative;
-      }
-
-      .projectContainer .projectDescrSection .projectTitle {
-        font-size: 25px;
-      }
-
-      @media (max-width: 768px) {
-        #name {
-          font-size: 45px;
-          font-weight: bold;
-        }
-
-        .projectContainer {
-          border-radius: 0 0 10px 10px;
-          padding-bottom: 50px;
-        }
-
-        .projectContainer .projectImg {
-          box-shadow: 5px 10px 20px var(--back-grey);
-        }
-
-        .projectContainer .projectDescrSection {
-          height: auto;
-        }
-
-        .demoBtn {
-          bottom: -3em;
-        }
-
-        .devPostBtn {
-          bottom: -3em;
-        }
-      }
-
-      @media (max-width: 576px) {
-        #title {
-          padding-left: 0;
-          left: 0;
-          right: 0;
-          text-align: center;
-        }
-
-        #name {
-          font-size: 45px;
-          font-weight: bold;
-        }
-
-        #email {
-          text-align: center;
-        }
-
-
-        .hackathon-text {
-          padding-bottom: 6px;
-          text-align: center;
-        }
-      }
-    </style>
+      gtag('config', 'UA-154692635-1');
+    </script>
   </head>
   <body>
     <div id="header">
