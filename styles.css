@@ -103,16 +103,10 @@ a:hover {
 }
 
 .demoBtn {
-  position: absolute;
-  bottom: 1em;
-  right: 0;
   color: white;
 }
 
 .devPostBtn {
-  position: absolute;
-  bottom: 1em;
-  left: 0;
   color: white;
 }
 
@@ -149,6 +143,10 @@ a:hover {
   font-size: 25px;
 }
 
+.created-text {
+  text-align: center;
+}
+
 @media (max-width: 768px) {
   #name {
     font-size: 45px;
@@ -157,7 +155,6 @@ a:hover {
 
   .projectContainer {
     border-radius: 0 0 10px 10px;
-    padding-bottom: 50px;
   }
 
   .projectContainer .projectImg {
@@ -166,14 +163,6 @@ a:hover {
 
   .projectContainer .projectDescrSection {
     height: auto;
-  }
-
-  .demoBtn {
-    bottom: -3em;
-  }
-
-  .devPostBtn {
-    bottom: -3em;
   }
 }
 
@@ -191,12 +180,6 @@ a:hover {
   }
 
   #email {
-    text-align: center;
-  }
-
-
-  .hackathon-text {
-    padding-bottom: 6px;
     text-align: center;
   }
 }

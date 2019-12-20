@@ -6,6 +6,7 @@
     <title>Juliette Chirol Hill</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous"/>
     <link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Montserrat|Raleway|Righteous" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link type="text/css" rel="stylesheet" href="styles.css"/>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -33,183 +34,143 @@
     </div>
 
     <div class="container">
-      <div id="projectListing">
-        <div class="projectContainer row">
-          <div class="projectImg col-12 col-md-5">
-            <a href="MindSpring/index.html"><img src="MindSpring.png" alt="MindSpring"/></a>
-          </div>
-          <div class=" col-12 col-md-7">
-            <div class="projectDescrSection">
-              <h5 class="projectTitle"><a href="https://github.com/JChirolHill/MindSpring">MindSpring</a></h5>
-              <p>Exercising your ability to look at a situation more creatively is much like
-                exercising any other muscle, and a great exercise is finding a similarity
-                between two seemingly unlike things.</p>
-              <div class="d-flex justify-content-around">
-                <p>jQuery</p>
-                <p>HTML</p>
-                <p>CSS</p>
-                <p>Javascript</p>
-              </div>
-              <p class="hackathon-text">Created at SD Hacks 2019</p>
-              <a href="https://devpost.com/software/mindspring" class="btn btn-redirect devPostBtn">Devpost</a>
-              <a href="MindSpring/index.html" class="btn btn-redirect demoBtn">Demo</a>
-            </div>
-          </div>
-        </div>
+      <div id="projectListing"></div>
+    </div>
 
-        <div class="projectContainer row">
-          <div class="projectImg col-12 col-md-5">
-            <a href="https://www.mshikepool.com"><img src="hikepool.png" alt="Hike Pool"/></a>
-          </div>
-          <div class="col-12 col-md-7">
-            <div class="projectDescrSection">
-              <h5 class="projectTitle"><a href="https://www.mshikepool.com">Hike Pool</a></h5>
-              <p>Join and organize rides to hikes near you.</p>
-              <div class="d-flex justify-content-around">
-                <p>Python</p>
-                <p>jQuery</p>
-                <p>HTML</p>
-                <p>CSS</p>
-                <p>Javascript</p>
-              </div>
-              <p class="hackathon-text">Created in Summer 2019</p>
-              <a href="https://www.mshikepool.com" class="btn btn-redirect demoBtn">Demo</a>
-            </div>
-          </div>
+    <script id="template_project" type="text/x-handlebars-template">
+      <div class="projectContainer row">
+        <div class="projectImg col-12 col-md-5">
+          <a href="{{demo_url}}"><img src="{{img_url}}" alt="{{title}}"/></a>
         </div>
-
-        <div class="projectContainer row">
-          <div class="projectImg col-12 col-md-5">
-            <a href="https://github.com/JChirolHill/Word2Song"><img src="word2song.png" alt="Word2Song"/></a>
-          </div>
-          <div class="col-12 col-md-7">
-            <div class="projectDescrSection">
-              <h5 class="projectTitle"><a href="https://github.com/JChirolHill/Word2Song">Word2Song</a></h5>
-              <p>Find songs containing vocab words in a language you are learning.</p>
-              <div class="d-flex justify-content-around">
-                <p>PHP</p>
-                <p>jQuery</p>
-                <p>HTML</p>
-                <p>CSS</p>
-                <p>Javascript</p>
-              </div>
-              <p class="hackathon-text">Created in Spring Break 2019</p>
+        <div class="col-12 col-md-7">
+          <div class="projectDescrSection">
+            <h5 class="projectTitle"><a href="{{github_url}}">{{title}}</a></h5>
+            <p>{{descr}}</p>
+            <div class="d-flex justify-content-around">
+              {{#each langs}}<p>{{this}}</p>{{/each}}
             </div>
-          </div>
-        </div>
-
-        <div class="projectContainer row">
-          <div class="projectImg col-12 col-md-5">
-            <a href="https://salhacks.com/ubershep"><img src="ubershep.png" alt="Uber Shep"/></a>
-          </div>
-          <div class=" col-12 col-md-7">
-            <div class="projectDescrSection">
-              <h5 class="projectTitle"><a href="https://github.com/RobotPirate/UberShep">Uber Shep</a></h5>
-              <p>Let UberShep guide you to your UberPool pickup spot!</p>
-              <div class="d-flex justify-content-around">
-                <p>PHP</p>
-                <p>jQuery</p>
-                <p>HTML</p>
-                <p>CSS</p>
-                <p>Javascript</p>
-              </div>
-              <p class="hackathon-text">Created at HackTech Spring 2019</p>
-              <a href="https://devpost.com/software/ubershep" class="btn btn-redirect devPostBtn">Devpost</a>
-              <a href="https://salhacks.com/ubershep" class="btn btn-redirect demoBtn">Demo</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="projectContainer row">
-          <div class="projectImg col-12 col-md-5">
-            <a href="https://salhacks.com/memorylane"><img src="MemLane.png" alt="Memory Lane"/></a>
-          </div>
-          <div class=" col-12 col-md-7">
-            <div class="projectDescrSection">
-              <h5 class="projectTitle"><a href="https://github.com/neutonfoo/memorylane">Memory Lane</a></h5>
-              <p>Create and complete scavenger hunts near you.  Experience the world in a whole new way.</p>
-              <div class="d-flex justify-content-around">
-                <p>PHP</p>
-                <p>jQuery</p>
-                <p>HTML</p>
-                <p>CSS</p>
-                <p>Javascript</p>
-              </div>
-              <p class="hackathon-text">Created at SB Hacks Spring 2019</p>
-              <a href="https://devpost.com/software/memory-lane-x9uapb" class="btn btn-redirect devPostBtn">Devpost</a>
-              <a href="https://salhacks.com/memorylane" class="btn btn-redirect demoBtn">Demo</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="projectContainer row">
-          <div class="projectImg col-12 col-md-5">
-            <a href="SpacedRepetition/index.html"><img src="SRSHome.png" alt="Spaced Repetition Scheduler"/></a>
-          </div>
-          <div class=" col-12 col-md-7">
-            <div class="projectDescrSection">
-              <h5 class="projectTitle"><a href="https://github.com/JChirolHill/SpacedRepetitionSchedule">Spaced Repetition Scheduler</a></h5>
-              <p>Generates a schedule of when to review for certain classes according to research on memory for optimal memory results.</p>
-              <div class="d-flex justify-content-around">
-                <p>jQuery</p>
-                <p>HTML</p>
-                <p>CSS</p>
-                <p>Javascript</p>
-              </div>
-              <p class="hackathon-text">Created in Winter Break 2018</p>
-              <a href="SpacedRepetition/index.html" class="btn btn-redirect demoBtn">Demo</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="projectContainer row">
-          <div class="projectImg col-12 col-md-5">
-            <a href="http://salhacks.com/wefood"><img src="WeFood.png" alt="WeFood"/></a>
-          </div>
-          <div class=" col-12 col-md-7">
-            <div class="projectDescrSection">
-              <h5 class="projectTitle"><a href="https://github.com/neutonfoo/wefood">WeFood</a></h5>
-              <p>Stop wasting time to decide where to eat.  WeFood finds nearby restaurants and allows friends to vote on where to go.</p>
-              <div class="d-flex justify-content-around">
-                <p>PHP</p>
-                <p>jQuery</p>
-                <p>HTML</p>
-                <p>CSS</p>
-                <p>Javascript</p>
-              </div>
-              <p class="hackathon-text">Created at TrojanHacks Fall 2018</p>
-              <a href="https://devpost.com/software/wefood" class="btn btn-redirect devPostBtn">Devpost</a>
-              <a href="http://salhacks.com/wefood" class="btn btn-redirect demoBtn">Demo</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="projectContainer row">
-          <div class="projectImg col-12 col-md-5">
-            <a href="Eclipse/index.html"><img src="EclipseHome.png" alt="Eclipse Method"/></a>
-          </div>
-          <div class=" col-12 col-md-7">
-            <div class="projectDescrSection">
-              <h5 class="projectTitle"><a href="https://github.com/JChirolHill/Eclipse">Eclipse Method</a></h5>
-              <p>An effective method for language learning based on cognitive science research with plenty of tips.</p>
-              <div class="d-flex justify-content-around">
-                <p>HTML</p>
-                <p>CSS</p>
-              </div>
-              <p class="hackathon-text">Created at TrojanHacks Spring 2018</p>
-              <a href="https://devpost.com/software/eclipse-hts58i" class="btn btn-redirect devPostBtn">Devpost</a>
-              <a href="Eclipse/index.html" class="btn btn-redirect demoBtn">Demo</a>
+            <p class="created-text">{{created_at}}</p>
+            <div class="d-flex justify-content-between mb-3">
+              {{#if devpost_url}}
+                <a href="{{devpost_url}}" class="btn btn-redirect devPostBtn">Devpost</a>
+              {{/if}}
+              <a href="{{github_url}}"><i class="fab fa-github fa-2x"></i></a>
+              <a href="{{demo_url}}" class="btn btn-redirect demoBtn">Demo</a>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </script>
 
     <script src="jquery-3.4.1.min.js"></script>
+    <script src="handlebars-v4.1.2.js"></script>
+    <script src="jquery.waypoints.min.js"></script>
     <script>
       $(document).ready(function() {
         $("#title").fadeIn(300);
-        $("#title").css("margin-left", "10px")
+        $("#title").css("margin-left", "10px");
+
+        const projectTemplate = Handlebars.compile($('#template_project').html());
+
+        let projects = [
+          {
+            title: 'MindSpring',
+            descr: 'Exercise your creativy with this game.',
+            img_url: 'MindSpring.png',
+            demo_url: 'MindSpring/index.html',
+            github_url: 'https://github.com/JChirolHill/MindSpring',
+            devpost_url: 'https://devpost.com/software/mindspring',
+            langs: ['Handlebars', 'jQuery', 'HTML', 'CSS', 'Javascript'],
+            created_at: 'Created at SD Hacks 2019'
+          },
+          {
+            title: 'Hike Pool',
+            descr: 'Join and organize rides to hikes near you.',
+            img_url: 'hikepool.png',
+            demo_url: 'https://www.mshikepool.com',
+            github_url: 'https://github.com/mes258/hikePool',
+            langs: ['Python', 'jQuery', 'HTML', 'CSS', 'Javascript'],
+            created_at: 'Created in Summer 2019'
+          },
+          {
+            title: 'Word2Song',
+            descr: 'Find songs containing vocab words in a language you are learning.',
+            img_url: 'word2song.png',
+            demo_url: 'https://word2song.herokuapp.com/',
+            github_url: 'https://github.com/JChirolHill/Word2Song',
+            langs: ['PHP', 'jQuery', 'HTML', 'CSS', 'Javascript'],
+            created_at: 'Created in Spring Break 2019'
+          },
+          {
+            title: 'Uber Shep',
+            descr: 'Let UberShep guide you to your UberPool pickup spot!',
+            img_url: 'ubershep.png',
+            demo_url: 'https://salhacks.com/ubershep',
+            github_url: 'https://github.com/RobotPirate/UberShep',
+            devpost_url: 'https://devpost.com/software/ubershep',
+            langs: ['PHP', 'jQuery', 'HTML', 'CSS', 'Javascript'],
+            created_at: 'Created at HackTech Spring 2019'
+          },
+          {
+            title: 'Memory Lane',
+            descr: 'Create and complete scavenger hunts near you.  Experience the world in a whole new way.',
+            img_url: 'MemLane.png',
+            demo_url: 'https://salhacks.com/memorylane',
+            github_url: 'https://github.com/neutonfoo/memorylane',
+            devpost_url: 'https://devpost.com/software/memory-lane-x9uapb',
+            langs: ['PHP', 'jQuery', 'HTML', 'CSS', 'Javascript'],
+            created_at: 'Created at SB Hacks Spring 2019'
+          },
+          {
+            title: 'Spaced Repetition Scheduler',
+            descr: 'Generates a schedule of when to review for certain classes according to research on memory for optimal memory results.',
+            img_url: 'SRSHome.png',
+            demo_url: 'SpacedRepetition/index.html',
+            github_url: 'https://github.com/JChirolHill/SpacedRepetitionSchedule',
+            langs: ['jQuery', 'HTML', 'CSS', 'Javascript'],
+            created_at: 'Created in Winter Break 2018'
+          },
+          {
+            title: 'WeFood',
+            descr: 'Stop wasting time to decide where to eat.  WeFood finds nearby restaurants and allows friends to vote on where to go.',
+            img_url: 'WeFood.png',
+            demo_url: 'http://salhacks.com/wefood',
+            github_url: 'https://github.com/neutonfoo/wefood',
+            devpost_url: 'https://devpost.com/software/wefood',
+            langs: ['PHP', 'jQuery', 'HTML', 'CSS', 'Javascript'],
+            created_at: 'Created at TrojanHacks Fall 2018'
+          },
+          {
+            title: 'Eclipse Method',
+            descr: 'An effective method for language learning based on cognitive science research with plenty of tips.',
+            img_url: 'EclipseHome.png',
+            demo_url: 'Eclipse/index.html',
+            github_url: 'https://github.com/JChirolHill/Eclipse',
+            devpost_url: 'https://devpost.com/software/eclipse-hts58i',
+            lang: ['HTML', 'CSS'],
+            created_at: 'Created at TrojanHacks Spring 2018'
+          }
+        ];
+
+        const $projectListing = $('#projectListing');
+        $.each(projects, function(index, project) {
+          $projectListing.append(projectTemplate(project));
+        });
+
+
+        // var waypoint = new Waypoint({
+        //   element: document.getElementById('projectListing'),
+        //   handler: function() {
+        //     alert('Basic waypoint 1 triggered')
+        //   }
+        // });
+        //
+        // var waypoint2 = new Waypoint({
+        //   element: document.getElementById('testwaypoint'),
+        //   handler: function() {
+        //     alert('Basic waypoint 2 triggered')
+        //   }
+        // });
       });
     </script>
   </body>
