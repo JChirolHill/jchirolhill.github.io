@@ -46,7 +46,7 @@
           <div class="projectDescrSection">
             <h5 class="projectTitle"><a href="{{github_url}}">{{title}}</a></h5>
             <p>{{descr}}</p>
-            <div class="d-flex justify-content-around">
+            <div class="d-flex flex-wrap justify-content-around">
               {{#each langs}}<p>{{this}}</p>{{/each}}
             </div>
             <p class="created-text">{{created_at}}</p>
@@ -73,6 +73,24 @@
 
         let projects = [
           {
+            title: 'MindSpring V2',
+            descr: 'Exercise your creativy with this game, play alone or with friends!',
+            img_url: 'MindSpringV2.png',
+            demo_url: 'https://mindspring.surge.sh/',
+            github_url: 'https://github.com/JChirolHill/404_MindSpring',
+            langs: ['React', 'Node.js', 'HTML', 'CSS'],
+            created_at: 'Created in Spring 2019'
+          },
+          {
+            title: 'Bean & Leaf',
+            descr: 'Track your coffee and tea intake and find coffee shops near you.',
+            img_url: 'BeanAndLeaf.png',
+            demo_url: 'https://github.com/JChirolHill/CSCI310_Project2',
+            github_url: 'https://github.com/JChirolHill/CSCI310_Project2',
+            langs: ['Android', 'Java', 'XML', 'Firebase', 'Google Cloud Platform'],
+            created_at: 'Created in Spring 2019'
+          },
+          {
             title: 'MindSpring',
             descr: 'Exercise your creativy with this game.',
             img_url: 'MindSpring.png',
@@ -90,6 +108,15 @@
             github_url: 'https://github.com/mes258/hikePool',
             langs: ['Python', 'jQuery', 'HTML', 'CSS', 'Javascript'],
             created_at: 'Created in Summer 2019'
+          },
+          {
+            title: 'Toki',
+            descr: 'A language app that focuses on the "how" of language learning with exercises.',
+            img_url: 'https://firebasestorage.googleapis.com/v0/b/finalprojectchirolhilljuliette.appspot.com/o/Demo2.png?alt=media&token=3e1e0e3f-98e4-4b06-a1ea-f38b8737cec9',
+            demo_url: 'https://github.com/JChirolHill/Toki',
+            github_url: 'https://github.com/JChirolHill/Toki',
+            langs: ['Android', 'Java', 'XML', 'Firebase', 'Google Cloud Platform'],
+            created_at: 'Created in Spring 2019'
           },
           {
             title: 'Word2Song',
@@ -131,7 +158,7 @@
           },
           {
             title: 'WeFood',
-            descr: 'Stop wasting time to decide where to eat.  WeFood finds nearby restaurants and allows friends to vote on where to go.',
+            descr: 'Stop wasting time to decide where to eat.  Find nearby restaurants and friends vote on where to go.',
             img_url: 'WeFood.png',
             demo_url: 'http://salhacks.com/wefood',
             github_url: 'https://github.com/neutonfoo/wefood',
@@ -151,16 +178,17 @@
           }
         ];
 
+        // dynamically generate all projects
+        // render visible those already scrolled to
         const $projectListing = $('#projectListing');
-        console.log($(window).height() + $(this).scrollTop());
         $.each(projects, function(index, project) {
           $projectListing.append(projectTemplate(project));
-          console.log($projectListing.children(':last').offset().top);
           if($projectListing.children(':last').offset().top < $(window).height()) {
             $projectListing.children(':last').css('opacity', '1');
           }
         });
 
+        // handles scrolling to display additional projects
         let $nextProject = $('#projectListing').children(':first');
         $(window).scroll(function() {
           if($nextProject.offset() && $nextProject.offset().top < $(this).height() + $(this).scrollTop()) {

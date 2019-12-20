@@ -145,7 +145,12 @@ a:hover {
   font-size: 25px;
 }
 
+.projectContainer .projectDescrSection div > p {
+  margin: 0;
+}
+
 .created-text {
+  margin-top: 1rem;
   text-align: center;
 }
 
