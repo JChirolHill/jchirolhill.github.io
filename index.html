@@ -64,7 +64,6 @@
 
     <script src="jquery-3.4.1.min.js"></script>
     <script src="handlebars-v4.1.2.js"></script>
-    <script src="jquery.waypoints.min.js"></script>
     <script>
       $(document).ready(function() {
         $("#title").fadeIn(300);
@@ -153,24 +152,22 @@
         ];
 
         const $projectListing = $('#projectListing');
+        console.log($(window).height() + $(this).scrollTop());
         $.each(projects, function(index, project) {
           $projectListing.append(projectTemplate(project));
+          console.log($projectListing.children(':last').offset().top);
+          if($projectListing.children(':last').offset().top < $(window).height()) {
+            $projectListing.children(':last').css('opacity', '1');
+          }
         });
 
-
-        // var waypoint = new Waypoint({
-        //   element: document.getElementById('projectListing'),
-        //   handler: function() {
-        //     alert('Basic waypoint 1 triggered')
-        //   }
-        // });
-        //
-        // var waypoint2 = new Waypoint({
-        //   element: document.getElementById('testwaypoint'),
-        //   handler: function() {
-        //     alert('Basic waypoint 2 triggered')
-        //   }
-        // });
+        let $nextProject = $('#projectListing').children(':first');
+        $(window).scroll(function() {
+          if($nextProject.offset() && $nextProject.offset().top < $(this).height() + $(this).scrollTop()) {
+            $nextProject.css('opacity', '1');
+            $nextProject = $nextProject.next();
+          }
+        });
       });
     </script>
   </body>

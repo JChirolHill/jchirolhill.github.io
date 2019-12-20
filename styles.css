@@ -118,6 +118,8 @@ a:hover {
   margin: 20px 0;
   position: relative;
   box-shadow: 5px 10px 20px var(--back-grey);
+  opacity: 0;
+  transition: all 1s;
 }
 
 .projectContainer .projectImg {
