@@ -55,7 +55,9 @@
                 <a href="{{devpost_url}}" class="btn btn-redirect devPostBtn">Devpost</a>
               {{/if}}
               <a href="{{github_url}}"><i class="fab fa-github fa-2x"></i></a>
-              <a href="{{demo_url}}" class="btn btn-redirect demoBtn">Demo</a>
+              {{#if demo_url}}
+                <a href="{{demo_url}}" class="btn btn-redirect demoBtn">Demo</a>
+              {{/if}}
             </div>
           </div>
         </div>
@@ -73,6 +75,14 @@
 
         let projects = [
           {
+            title: 'Lord of the Rings Chrome Extension',
+            descr: 'What happened today in Middle Earth? (Complementary quote of the day!)',
+            img_url: 'LotRCal.png',
+            github_url: 'https://github.com/JChirolHill/LotRQuoteCal',
+            langs: ['Chrome Extension', 'Javscript', 'HTML', 'CSS'],
+            created_at: 'Created in Winter 2019'
+          },
+          {
             title: 'MindSpring V2',
             descr: 'Exercise your creativy with this game, play alone or with friends!',
             img_url: 'MindSpringV2.png',
@@ -85,7 +95,6 @@
             title: 'Bean & Leaf',
             descr: 'Track your coffee and tea intake and find coffee shops near you.',
             img_url: 'BeanAndLeaf.png',
-            demo_url: 'https://github.com/JChirolHill/CSCI310_Project2',
             github_url: 'https://github.com/JChirolHill/CSCI310_Project2',
             langs: ['Android', 'Java', 'XML', 'Firebase', 'Google Cloud Platform'],
             created_at: 'Created in Spring 2019'
@@ -113,7 +122,6 @@
             title: 'Toki',
             descr: 'A language app that focuses on the "how" of language learning with exercises.',
             img_url: 'https://firebasestorage.googleapis.com/v0/b/finalprojectchirolhilljuliette.appspot.com/o/Demo2.png?alt=media&token=3e1e0e3f-98e4-4b06-a1ea-f38b8737cec9',
-            demo_url: 'https://github.com/JChirolHill/Toki',
             github_url: 'https://github.com/JChirolHill/Toki',
             langs: ['Android', 'Java', 'XML', 'Firebase', 'Google Cloud Platform'],
             created_at: 'Created in Spring 2019'
