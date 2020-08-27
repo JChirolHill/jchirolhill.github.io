@@ -51,7 +51,9 @@
             </div>
             <p class="created-text">{{created_at}}</p>
             <div class="d-flex justify-content-between mb-3">
-              <a href="{{github_url}}"><i class="fab fa-github fa-2x"></i></a>
+              {{#if github_url}}
+                <a href="{{github_url}}"><i class="fab fa-github fa-2x"></i></a>
+              {{/if}}
               {{#if devpost_url}}
                 <a href="{{devpost_url}}" class="btn btn-redirect devPostBtn">Devpost</a>
               {{/if}}
@@ -74,6 +76,14 @@
         const projectTemplate = Handlebars.compile($('#template_project').html());
 
         let projects = [
+          {
+            title: 'CSU-Fullerton Virtual Graduate Art Show',
+            descr: 'Virtual version of annual art show for CSU-Fullerton graduate program.',
+            img_url: 'Assets/GradShow.png',
+            demo_url: 'http://www.toi.school/',
+            langs: ['HTML', 'CSS', 'Javascript', 'Lightbox JS'],
+            created_at: 'Created in Summer 2020'
+          },
           {
             title: 'Novel Voices',
             descr: 'Character-driven story development to bring your characters to life.',
