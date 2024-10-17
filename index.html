@@ -1,68 +1,117 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Juliette Chirol Hill</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous"/>
-    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Montserrat|Raleway|Righteous" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link href="styles/lightbox.min.css" rel="stylesheet"/>
-    <link type="text/css" rel="stylesheet" href="styles/styles.css"/>
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        <title>Juliette Chirol Hill</title>
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+            integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+            crossorigin="anonymous"
+        />
+        <link
+            href="https://fonts.googleapis.com/css?family=Architects+Daughter|Montserrat|Raleway|Righteous"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+            integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+            crossorigin="anonymous"
+        />
+        <link href="styles/lightbox.min.css" rel="stylesheet" />
+        <link type="text/css" rel="stylesheet" href="styles/styles.css" />
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-  </head>
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+            integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+            integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+            crossorigin="anonymous"
+        ></script>
+    </head>
 
-  <body>
-    <div id="header">
-      <img src="Assets/Lake.JPG" alt="Lake Image">
-      <div class="overlay"></div>
-      <div id="title">
-        <div id="name">Juliette Chirol Hill</div>
-          <div id="email"><a href="mailto:jchirolhill@zoho.com" target="_blank">jchirolhill@zoho.com</a></div>
-        </div>
-    </div>
-
-    <div class="container">
-      <div id="projectListing"></div>
-    </div>
-
-    <script id="template_project" type="text/x-handlebars-template">
-      <div class="projectContainer row">
-        <div class="projectImg col-12 col-md-5">
-          <a href="{{img_url}}" data-lightbox="{{title}}">
-              <img src="{{img_url}}"Assets/ alt="{{title}}"/>
-          </a>
-        </div>
-        <div class="col-12 col-md-7">
-          <div class="projectDescrSection">
-            <h5 class="projectTitle"><a href="{{github_url}}">{{title}}</a></h5>
-            <p>{{descr}}</p>
-            <div class="d-flex flex-wrap justify-content-around">
-              {{#each langs}}<p class="text-center" style="width: 20%;">{{this}}</p>{{/each}}
+    <body>
+        <div id="header">
+            <img src="Assets/Lake.JPG" alt="Lake Image" />
+            <div class="overlay"></div>
+            <div id="title">
+                <div id="name">Juliette Chirol Hill</div>
+                <div id="email">
+                    <a href="mailto:jchirolhill@zoho.com" target="_blank"
+                        >jchirolhill@zoho.com</a
+                    >
+                </div>
             </div>
-            <p class="created-text">{{created_at}}</p>
-            <div class="d-flex justify-content-between mb-3">
-              {{#if github_url}}
-                <a href="{{github_url}}"><i class="fab fa-github fa-2x"></i></a>
-              {{/if}}
-              {{#if devpost_url}}
-                <a href="{{devpost_url}}" class="btn btn-redirect devPostBtn">Devpost</a>
-              {{/if}}
-              {{#if demo_url}}
-                <a href="{{demo_url}}" class="btn btn-redirect demoBtn">Demo</a>
-              {{/if}}
-            </div>
-          </div>
         </div>
-      </div>
-    </script>
 
-    <script src="scripts/jquery-3.4.1.min.js"></script>
-    <script src="scripts/handlebars-v4.1.2.js"></script>
-    <script src="scripts/lightbox.min.js"></script>
-    <script src="scripts/scripts.js"></script>
-  </body>
+        <div class="container">
+            <div id="projectListing" class="row flex-wrap"></div>
+        </div>
+
+        <script id="template_project" type="text/x-handlebars-template">
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="projectContainer">
+                    <div class="projectImg">
+                        <a href="{{img_url}}" data-lightbox="{{title}}">
+                            <img src="{{img_url}}" Assets alt="{{title}}" />
+                        </a>
+                    </div>
+                    <div class="">
+                        <div class="projectDescrSection">
+                            <h5 class="projectTitle"><a
+                                    href="{{github_url}}"
+                                >{{title}}</a></h5>
+                            <p>{{descr}}</p>
+                            <div
+                                class="d-flex flex-wrap justify-content-around"
+                            >
+                                {{#each langs}}<p
+                                        class="text-center"
+                                        style="width: 20%;"
+                                    >{{this}}</p>{{/each}}
+                            </div>
+                            <p class="created-text">{{created_at}}</p>
+                            <div class="d-flex justify-content-between mb-3">
+                                {{#if github_url}}
+                                    <a href="{{github_url}}"><i
+                                            class="fab fa-github fa-2x"
+                                        ></i></a>
+                                {{/if}}
+                                {{#if devpost_url}}
+                                    <a
+                                        href="{{devpost_url}}"
+                                        class="btn btn-redirect devPostBtn"
+                                    >Devpost</a>
+                                {{/if}}
+                                {{#if demo_url}}
+                                    <a
+                                        href="{{demo_url}}"
+                                        class="btn btn-redirect demoBtn"
+                                    >Demo</a>
+                                {{/if}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </script>
+
+        <script src="scripts/jquery-3.4.1.min.js"></script>
+        <script src="scripts/handlebars-v4.1.2.js"></script>
+        <script src="scripts/lightbox.min.js"></script>
+        <script src="scripts/scripts.js"></script>
+    </body>
 </html>

@@ -4,7 +4,7 @@
         "descr": "Train your target language pronunciation on Tatoeba's large collection of example sentences.",
         "img_url": "",
         "platform": "Web",
-        "langs": ["Javascript"],
+        "langs": ["JavaScript"],
         "libraries-frameworks": ["Chrome Extension"],
         "created_at": "Created in Summer 2024",
         "tags": ["Language Learning"]
@@ -14,7 +14,7 @@
         "descr": "Paste external text and view vocabulary based on your selected HSK level.",
         "img_url": "",
         "platform": "Web",
-        "langs": ["Javascript", "React"],
+        "langs": ["JavaScript", "React"],
         "libraries-frameworks": [],
         "created_at": "Created in Summer 2022",
         "tags": ["Language Learning"]
@@ -25,7 +25,7 @@
         "img_url": "Assets/AutoCard.png",
         "demo_url": "",
         "platform": "Web",
-        "langs": ["Javascript"],
+        "langs": ["JavaScript"],
         "libraries-frameworks": ["Bootstrap", "Chrome Extension"],
         "created_at": "Created in Summer 2021",
         "tags": ["Language Learning"]
@@ -36,7 +36,7 @@
         "img_url": "",
         "demo_url": "",
         "platform": "Web",
-        "langs": ["Javascript"],
+        "langs": ["JavaScript"],
         "libraries-frameworks": ["Bootstrap", "Chrome Extension"],
         "created_at": "Created in Spring 2021",
         "tags": ["Language Learning"]
@@ -47,7 +47,7 @@
         "img_url": "Assets/emerge.png",
         "demo_url": "",
         "platform": "Web",
-        "langs": ["Javascript"],
+        "langs": ["JavaScript"],
         "libraries-frameworks": ["Bootstrap", "React"],
         "created_at": "Created in Winter 2020",
         "tags": ["Language Learning"]
@@ -57,7 +57,7 @@
         "descr": "Virtual version of annual art show for CSU-Fullerton graduate program.",
         "img_url": "Assets/GradShow.png",
         "platform": "Web",
-        "langs": ["Javascript"],
+        "langs": ["JavaScript"],
         "libraries-frameworks": ["Bootstrap", "Lightbox JS"],
         "created_at": "Created in Summer 2020",
         "tags": []
@@ -67,7 +67,7 @@
         "descr": "Web app for Los Angeles Fire Department Lifeguards for tracking beach conditions and metrics.",
         "img_url": "Assets/LALifeguards.png",
         "platform": "Web",
-        "langs": ["Javascript", "PHP"],
+        "langs": ["JavaScript", "PHP"],
         "libraries-frameworks": ["Bootstrap", "Laravel"],
         "created_at": "Created in Spring 2020",
         "tags": []
@@ -78,7 +78,7 @@
         "img_url": "Assets/NovelVoices.png",
         "github_url": "https://github.com/JChirolHill/NovelVoices",
         "platform": "Web",
-        "langs": ["Javascript", "PHP"],
+        "langs": ["JavaScript", "PHP"],
         "libraries-frameworks": [
             "Bootstrap",
             "jQuery",
@@ -119,7 +119,7 @@
         "img_url": "Assets/LotRCal.png",
         "github_url": "https://github.com/JChirolHill/LotRQuoteCal",
         "platform": "Web",
-        "langs": ["Javascript"],
+        "langs": ["JavaScript"],
         "libraries-frameworks": ["Chrome Extension"],
         "created_at": "Created in Winter 2019",
         "tags": []
@@ -131,7 +131,7 @@
         "demo_url": "https://mindspring.surge.sh/",
         "github_url": "https://github.com/JChirolHill/404_MindSpring",
         "platform": "Web",
-        "langs": ["Javascript"],
+        "langs": ["JavaScript"],
         "libraries-frameworks": ["Bootstrap", "React", "Node.js"],
         "created_at": "Created in Spring 2019",
         "tags": []
@@ -165,7 +165,7 @@
         "img_url": "Assets/word2song.png",
         "github_url": "https://github.com/JChirolHill/Word2Song",
         "platform": "Web",
-        "langs": ["Javascript", "PHP"],
+        "langs": ["JavaScript", "PHP"],
         "libraries-frameworks": ["Bootstrap", "jQuery"],
         "created_at": "Created in Spring Break 2019",
         "tags": ["Language Learning"]
@@ -177,7 +177,7 @@
         "github_url": "https://github.com/neutonfoo/memorylane",
         "devpost_url": "https://devpost.com/software/memory-lane-x9uapb",
         "platform": "Web",
-        "langs": ["Javascript", "PHP"],
+        "langs": ["JavaScript", "PHP"],
         "libraries-frameworks": ["Bootstrap", "jQuery"],
         "created_at": "Created at SB Hacks Spring 2019",
         "tags": []
@@ -189,7 +189,7 @@
         "demo_url": "SpacedRepetition/index.html",
         "github_url": "https://github.com/JChirolHill/SpacedRepetitionSchedule",
         "platform": "Web",
-        "langs": ["Javascript"],
+        "langs": ["JavaScript"],
         "libraries-frameworks": ["Bootstrap", "jQuery"],
         "created_at": "Created in Winter Break 2018",
         "tags": ["Language Learning"]
@@ -201,7 +201,7 @@
         "github_url": "https://github.com/neutonfoo/wefood",
         "devpost_url": "https://devpost.com/software/wefood",
         "platform": "Web",
-        "langs": ["Javascript", "PHP"],
+        "langs": ["JavaScript", "PHP"],
         "libraries-frameworks": ["jQuery"],
         "created_at": "Created at TrojanHacks Fall 2018",
         "tags": []
