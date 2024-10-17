@@ -7,7 +7,7 @@
         "langs": ["JavaScript"],
         "libraries-frameworks": ["Chrome Extension"],
         "created_at": "Created in Summer 2024",
-        "tags": ["Language Learning"]
+        "tags": ["featured", "language-learning"]
     },
     {
         "title": "Chinese HSK Reader",
@@ -17,7 +17,7 @@
         "langs": ["JavaScript", "React"],
         "libraries-frameworks": [],
         "created_at": "Created in Summer 2022",
-        "tags": ["Language Learning"]
+        "tags": ["featured", "language-learning"]
     },
     {
         "title": "AutoCard",
@@ -28,7 +28,7 @@
         "langs": ["JavaScript"],
         "libraries-frameworks": ["Bootstrap", "Chrome Extension"],
         "created_at": "Created in Summer 2021",
-        "tags": ["Language Learning"]
+        "tags": ["language-learning"]
     },
     {
         "title": "Emerge Italki Extension",
@@ -39,18 +39,18 @@
         "langs": ["JavaScript"],
         "libraries-frameworks": ["Bootstrap", "Chrome Extension"],
         "created_at": "Created in Spring 2021",
-        "tags": ["Language Learning"]
+        "tags": ["language-learning"]
     },
     {
         "title": "Emerge",
-        "descr": "Reformat blurb corrections into line-by-line for more focused language learning.",
+        "descr": "Reformat blurb corrections into line-by-line for more focused language-learning.",
         "img_url": "Assets/emerge.png",
         "demo_url": "",
         "platform": "Web",
         "langs": ["JavaScript"],
         "libraries-frameworks": ["Bootstrap", "React"],
         "created_at": "Created in Winter 2020",
-        "tags": ["Language Learning"]
+        "tags": ["featured", "language-learning"]
     },
     {
         "title": "CSU-Fullerton Virtual Graduate Art Show",
@@ -60,7 +60,7 @@
         "langs": ["JavaScript"],
         "libraries-frameworks": ["Bootstrap", "Lightbox JS"],
         "created_at": "Created in Summer 2020",
-        "tags": []
+        "tags": ["featured"]
     },
     {
         "title": "Los Angeles Fire Department - Lifeguard Tracking Web App",
@@ -86,7 +86,7 @@
             "Google Cloud NLP"
         ],
         "created_at": "Created in Spring 2020",
-        "tags": []
+        "tags": ["featured"]
     },
     {
         "title": "Starry Night",
@@ -111,7 +111,7 @@
         "langs": ["C++"],
         "libraries-frameworks": ["SDL"],
         "created_at": "Created at Rose Hacks 2020",
-        "tags": []
+        "tags": ["featured"]
     },
     {
         "title": "Lord of the Rings Daily Happenings",
@@ -134,7 +134,7 @@
         "langs": ["JavaScript"],
         "libraries-frameworks": ["Bootstrap", "React", "Node.js"],
         "created_at": "Created in Spring 2019",
-        "tags": []
+        "tags": ["featured"]
     },
     {
         "title": "Bean & Leaf",
@@ -149,7 +149,7 @@
     },
     {
         "title": "Toki",
-        "descr": "A language app that focuses on the how of language learning with exercises.",
+        "descr": "A language app that focuses on the how of language-learning with exercises.",
         "img_url": "https://firebasestorage.googleapis.com/v0/b/finalprojectchirolhilljuliette.appspot.com/o/Demo2.png?alt=media&token=3e1e0e3f-98e4-4b06-a1ea-f38b8737cec9",
         "demo_url": "https://youtu.be/rQ5G9_jBtZE",
         "github_url": "https://github.com/JChirolHill/Toki",
@@ -157,7 +157,7 @@
         "langs": ["XML", "Java"],
         "libraries-frameworks": ["Firebase", "Google Cloud Platform"],
         "created_at": "Created in Spring 2019",
-        "tags": ["Language Learning"]
+        "tags": ["language-learning"]
     },
     {
         "title": "Word2Song",
@@ -168,7 +168,7 @@
         "langs": ["JavaScript", "PHP"],
         "libraries-frameworks": ["Bootstrap", "jQuery"],
         "created_at": "Created in Spring Break 2019",
-        "tags": ["Language Learning"]
+        "tags": ["language-learning"]
     },
     {
         "title": "Memory Lane",
@@ -192,7 +192,7 @@
         "langs": ["JavaScript"],
         "libraries-frameworks": ["Bootstrap", "jQuery"],
         "created_at": "Created in Winter Break 2018",
-        "tags": ["Language Learning"]
+        "tags": ["language-learning"]
     },
     {
         "title": "WeFood",
