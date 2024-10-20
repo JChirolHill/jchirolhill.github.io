@@ -1,0 +1,213 @@
+:root {
+    --main-color: #9cd6cf;
+    --main-dark: #74bdb4;
+    --main-darker: #3f8f86;
+    --back-grey: #c5d6d3;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Raleway", cursive;
+    background-color: #f7fffe;
+}
+
+a {
+    transition: all 0.25s;
+    color: var(--main-darker);
+}
+
+a:hover {
+    text-decoration: none;
+    color: var(--main-dark);
+}
+
+#header {
+    position: relative;
+    height: 300px;
+    width: 100%;
+}
+
+#header img {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+#header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0) 60%,
+        rgba(0, 0, 0, 0.8) 100%
+    );
+}
+
+#title {
+    font-family: "Raleway", cursive;
+    padding: 130px 0 0 170px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    text-shadow: 2px 2px 20px #000;
+    transition: margin-left 1s;
+    display: none;
+}
+
+#name {
+    font-size: 55px;
+    font-weight: bold;
+}
+
+#email {
+    margin-top: -10px;
+    text-align: right;
+}
+
+#email a {
+    color: white;
+    text-decoration: none;
+}
+
+#tags {
+    gap: 1em;
+}
+
+#tags div {
+    background-image: linear-gradient(var(--back-grey), rgba(255, 255, 255, 0));
+    border-radius: 10px 10px 0 0;
+    margin: 1em 0 0;
+    padding: 0.6em 1em;
+    transition: all 0.35s;
+    cursor: pointer;
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+#tags div:not(.selectedTag):hover {
+    transform: translate(0, -2px);
+}
+
+#tags .selectedTag {
+    transform: translate(0, -5px);
+    background-image: linear-gradient(
+        var(--main-color),
+        rgba(255, 255, 255, 0)
+    );
+}
+
+.hackathon-text {
+    color: grey;
+}
+
+.projectImg {
+    transition: all 0.5s;
+    overflow: hidden;
+    height: 250px;
+    background-color: #fff;
+}
+
+.projectImg:hover {
+    transform: scale(1.025);
+}
+
+.btn-redirect {
+    background-color: var(--main-color);
+}
+
+.btn-redirect:hover {
+    background-color: var(--main-dark);
+    color: white;
+}
+
+.demoBtn {
+    color: white;
+}
+
+.devPostBtn {
+    color: white;
+}
+
+.projectContainer {
+    background-color: white;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px 0;
+    position: relative;
+    box-shadow: 5px 10px 20px var(--back-grey);
+    transition: all 1s;
+}
+
+.projectContainer .projectImg {
+    padding: 0;
+    box-shadow: 5px 10px 20px var(--back-grey);
+}
+
+.projectContainer .projectImg img {
+    width: 100%;
+}
+
+.projectContainer .projectDescrSection {
+    width: 90%;
+    padding-top: 20px;
+    margin: 0 auto 0 auto;
+    height: 100%;
+    position: relative;
+}
+
+.projectContainer .projectDescrSection .projectTitle {
+    font-size: 25px;
+}
+
+.projectContainer .projectDescrSection div > p {
+    margin: 0;
+}
+
+.created-text {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    #name {
+        font-size: 45px;
+        font-weight: bold;
+    }
+
+    .projectContainer .projectDescrSection {
+        height: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    #title {
+        padding-left: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+    }
+
+    #name {
+        font-size: 45px;
+        font-weight: bold;
+    }
+
+    #email {
+        text-align: center;
+    }
+}

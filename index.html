@@ -1,245 +1,124 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Juliette Chirol Hill</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous"/>
-    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Montserrat|Raleway|Righteous" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link type="text/css" rel="stylesheet" href="styles.css"/>
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        <title>Juliette Chirol Hill</title>
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+            integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+            crossorigin="anonymous"
+        />
+        <link
+            href="https://fonts.googleapis.com/css?family=Architects+Daughter|Montserrat|Raleway|Righteous"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+            integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+            crossorigin="anonymous"
+        />
+        <link href="styles/lightbox.min.css" rel="stylesheet" />
+        <link type="text/css" rel="stylesheet" href="styles/styles.css" />
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+            integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+            integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+            crossorigin="anonymous"
+        ></script>
+    </head>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-154692635-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-154692635-1');
-    </script>
-  </head>
-  <body>
-    <div id="header">
-      <img src="Assets/Lake.JPG" alt="Lake Image">
-      <div class="overlay"></div>
-      <div id="title">
-        <div id="name">Juliette Chirol Hill</div>
-          <div id="email"><a href="mailto:chirolhi@usc.edu" target="_blank">chirolhi@usc.edu</a></div>
-        </div>
-    </div>
-
-    <div class="container">
-      <div id="projectListing"></div>
-    </div>
-
-    <script id="template_project" type="text/x-handlebars-template">
-      <div class="projectContainer row">
-        <div class="projectImg col-12 col-md-5">
-          <a href="{{demo_url}}"><img src="{{img_url}}"Assets/ alt="{{title}}"/></a>
-        </div>
-        <div class="col-12 col-md-7">
-          <div class="projectDescrSection">
-            <h5 class="projectTitle"><a href="{{github_url}}">{{title}}</a></h5>
-            <p>{{descr}}</p>
-            <div class="d-flex flex-wrap justify-content-around">
-              {{#each langs}}<p class="text-center" style="width: 20%;">{{this}}</p>{{/each}}
+    <body>
+        <div id="header">
+            <img src="Assets/Lake.JPG" alt="Lake Image" />
+            <div class="overlay"></div>
+            <div id="title">
+                <div id="name">Juliette Chirol Hill</div>
+                <div id="email">
+                    <a href="mailto:jchirolhill@zoho.com" target="_blank"
+                        >jchirolhill@zoho.com</a
+                    >
+                </div>
             </div>
-            <p class="created-text">{{created_at}}</p>
-            <div class="d-flex justify-content-between mb-3">
-              {{#if github_url}}
-                <a href="{{github_url}}"><i class="fab fa-github fa-2x"></i></a>
-              {{/if}}
-              {{#if devpost_url}}
-                <a href="{{devpost_url}}" class="btn btn-redirect devPostBtn">Devpost</a>
-              {{/if}}
-              {{#if demo_url}}
-                <a href="{{demo_url}}" class="btn btn-redirect demoBtn">Demo</a>
-              {{/if}}
-            </div>
-          </div>
         </div>
-      </div>
-    </script>
 
-    <script src="jquery-3.4.1.min.js"></script>
-    <script src="handlebars-v4.1.2.js"></script>
-    <script>
-      $(document).ready(function() {
-        $("#title").fadeIn(300);
-        $("#title").css("margin-left", "10px");
+        <div class="container">
+            <div id="tags" class="d-flex">
+                <div id="featured" class="selectedTag">Featured</div>
+                <div id="language-learning">Language Learning</div>
+                <div id="game">Games</div>
+                <div id="all">All Projects</div>
+            </div>
 
-        const projectTemplate = Handlebars.compile($('#template_project').html());
+            <div id="projectListing" class="row flex-wrap"></div>
+        </div>
 
-        let projects = [
-          {
-            title: 'CSU-Fullerton Virtual Graduate Art Show',
-            descr: 'Virtual version of annual art show for CSU-Fullerton graduate program.',
-            img_url: 'Assets/GradShow.png',
-            demo_url: 'http://www.toi.school/',
-            langs: ['HTML', 'CSS', 'Javascript', 'Lightbox JS'],
-            created_at: 'Created in Summer 2020'
-          },
-          {
-            title: 'Novel Voices',
-            descr: 'Character-driven story development to bring your characters to life.',
-            img_url: 'Assets/NovelVoices.png',
-            demo_url: 'https://novel-voices.herokuapp.com/',
-            github_url: 'https://github.com/JChirolHill/NovelVoices',
-            langs: ['Laravel', 'Google Cloud NLP', 'PHP', 'jQuery', 'HTML', 'CSS', 'Javascript'],
-            created_at: 'Created in Spring 2020'
-          },
-          {
-            title: 'Starry Night',
-            descr: 'The sun is setting, but there are no stars in the sky. It is up to you, a small otter in the ocean, to bounce the sun to create stars to fill the night sky.',
-            img_url: 'Assets/StarryNight.jpg',
-            demo_url: 'https://www.youtube.com/watch?v=XtMlaz9Fpp8',
-            github_url: 'https://github.com/JChirolHill/StarryNight',
-            devpost_url: 'https://devpost.com/software/starry-night',
-            langs: ['Java', 'JavaFX'],
-            created_at: 'Created at LA Hacks 2020'
-          },
-          {
-            title: 'One More Light',
-            descr: 'Collect falling stars to help light up your friend.',
-            img_url: 'Assets/OneMoreLight.jpg',
-            github_url: 'https://github.com/JChirolHill/OneMoreLight',
-            devpost_url: 'https://devpost.com/software/one-more-light',
-            langs: ['C++', 'SDL'],
-            created_at: 'Created at Rose Hacks 2020'
-          },
-          {
-            title: 'Lord of the Rings Chrome Extension',
-            descr: 'What happened today in Middle Earth? (Complementary quote of the day!)',
-            img_url: 'Assets/LotRCal.png',
-            github_url: 'https://github.com/JChirolHill/LotRQuoteCal',
-            langs: ['Chrome Extension', 'Javascript', 'HTML', 'CSS'],
-            created_at: 'Created in Winter 2019'
-          },
-          {
-            title: 'MindSpring V2',
-            descr: 'Exercise your creativy with this game, play alone or with friends!',
-            img_url: 'Assets/MindSpringV2.png',
-            demo_url: 'https://mindspring.surge.sh/',
-            github_url: 'https://github.com/JChirolHill/404_MindSpring',
-            langs: ['React', 'Node.js', 'HTML', 'CSS'],
-            created_at: 'Created in Spring 2019'
-          },
-          {
-            title: 'Bean & Leaf',
-            descr: 'Track your coffee and tea intake and find coffee shops near you.',
-            img_url: 'Assets/BeanAndLeaf.png',
-            github_url: 'https://github.com/JChirolHill/CSCI310_Project2',
-            langs: ['Android', 'Java', 'XML', 'Firebase', 'Google Cloud Platform'],
-            created_at: 'Created in Spring 2019'
-          },
-          {
-            title: 'MindSpring',
-            descr: 'Exercise your creativy with this game.',
-            img_url: 'Assets/MindSpring.png',
-            demo_url: 'MindSpring/index.html',
-            github_url: 'https://github.com/JChirolHill/MindSpring',
-            devpost_url: 'https://devpost.com/software/mindspring',
-            langs: ['Handlebars', 'jQuery', 'HTML', 'CSS', 'Javascript'],
-            created_at: 'Created at SD Hacks 2019'
-          },
-          {
-            title: 'Hike Pool',
-            descr: 'Join and organize rides to hikes near you.',
-            img_url: 'Assets/hikepool.png',
-            github_url: 'https://github.com/mes258/hikePool',
-            langs: ['Python', 'jQuery', 'HTML', 'CSS', 'Javascript'],
-            created_at: 'Created in Summer 2019'
-          },
-          {
-            title: 'Toki',
-            descr: 'A language app that focuses on the "how" of language learning with exercises.',
-            img_url: 'https://firebasestorage.googleapis.com/v0/b/finalprojectchirolhilljuliette.appspot.com/o/Demo2.png?alt=media&token=3e1e0e3f-98e4-4b06-a1ea-f38b8737cec9',
-            demo_url: 'https://youtu.be/rQ5G9_jBtZE',
-            github_url: 'https://github.com/JChirolHill/Toki',
-            langs: ['Android', 'Java', 'XML', 'Firebase', 'Google Cloud Platform'],
-            created_at: 'Created in Spring 2019'
-          },
-          {
-            title: 'Word2Song',
-            descr: 'Find songs containing vocab words in a language you are learning.',
-            img_url: 'Assets/word2song.png',
-            demo_url: 'https://word2song.herokuapp.com/',
-            github_url: 'https://github.com/JChirolHill/Word2Song',
-            langs: ['PHP', 'jQuery', 'HTML', 'CSS', 'Javascript'],
-            created_at: 'Created in Spring Break 2019'
-          },
-          {
-            title: 'Uber Shep',
-            descr: 'Let UberShep guide you to your UberPool pickup spot!',
-            img_url: 'Assets/ubershep.png',
-            github_url: 'https://github.com/RobotPirate/UberShep',
-            devpost_url: 'https://devpost.com/software/ubershep',
-            langs: ['PHP', 'jQuery', 'HTML', 'CSS', 'Javascript'],
-            created_at: 'Created at HackTech Spring 2019'
-          },
-          {
-            title: 'Memory Lane',
-            descr: 'Create and complete scavenger hunts near you.  Experience the world in a whole new way.',
-            img_url: 'Assets/MemLane.png',
-            github_url: 'https://github.com/neutonfoo/memorylane',
-            devpost_url: 'https://devpost.com/software/memory-lane-x9uapb',
-            langs: ['PHP', 'jQuery', 'HTML', 'CSS', 'Javascript'],
-            created_at: 'Created at SB Hacks Spring 2019'
-          },
-          {
-            title: 'Spaced Repetition Scheduler',
-            descr: 'Generates a schedule of when to review for certain classes according to research on memory for optimal memory results.',
-            img_url: 'Assets/SRSHome.png',
-            demo_url: 'SpacedRepetition/index.html',
-            github_url: 'https://github.com/JChirolHill/SpacedRepetitionSchedule',
-            langs: ['jQuery', 'HTML', 'CSS', 'Javascript'],
-            created_at: 'Created in Winter Break 2018'
-          },
-          {
-            title: 'WeFood',
-            descr: 'Stop wasting time to decide where to eat.  Find nearby restaurants and friends vote on where to go.',
-            img_url: 'Assets/WeFood.png',
-            github_url: 'https://github.com/neutonfoo/wefood',
-            devpost_url: 'https://devpost.com/software/wefood',
-            langs: ['PHP', 'jQuery', 'HTML', 'CSS', 'Javascript'],
-            created_at: 'Created at TrojanHacks Fall 2018'
-          },
-          {
-            title: 'Eclipse Method',
-            descr: 'An effective method for language learning based on cognitive science research with plenty of tips.',
-            img_url: 'Assets/EclipseHome.png',
-            demo_url: 'Eclipse/index.html',
-            github_url: 'https://github.com/JChirolHill/Eclipse',
-            devpost_url: 'https://devpost.com/software/eclipse-hts58i',
-            lang: ['HTML', 'CSS'],
-            created_at: 'Created at TrojanHacks Spring 2018'
-          }
-        ];
+        <script id="template_project" type="text/x-handlebars-template">
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="projectContainer">
+                    <div class="projectImg">
+                        <a href="{{img_url}}" data-lightbox="{{title}}">
+                            <img src="{{img_url}}" Assets alt="{{title}}" />
+                        </a>
+                    </div>
+                    <div class="">
+                        <div class="projectDescrSection">
+                            <h5 class="projectTitle"><a
+                                    href="{{github_url}}"
+                                >{{title}}</a></h5>
+                            <p>{{descr}}</p>
+                            <div
+                                class="d-flex flex-wrap justify-content-around"
+                            >
+                                {{#each langs}}<p
+                                        class="text-center"
+                                        style="width: 20%;"
+                                    >{{this}}</p>{{/each}}
+                            </div>
+                            <p class="created-text">{{created_at}}</p>
+                            <div class="d-flex justify-content-between mb-3">
+                                {{#if github_url}}
+                                    <a href="{{github_url}}"><i
+                                            class="fab fa-github fa-2x"
+                                        ></i></a>
+                                {{/if}}
+                                {{#if devpost_url}}
+                                    <a
+                                        href="{{devpost_url}}"
+                                        class="btn btn-redirect devPostBtn"
+                                    >Devpost</a>
+                                {{/if}}
+                                {{#if demo_url}}
+                                    <a
+                                        href="{{demo_url}}"
+                                        class="btn btn-redirect demoBtn"
+                                    >Demo</a>
+                                {{/if}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </script>
 
-        // dynamically generate all projects
-        // render visible those already scrolled to
-        const $projectListing = $('#projectListing');
-        $.each(projects, function(index, project) {
-          $projectListing.append(projectTemplate(project));
-          if($projectListing.children(':last').offset().top < $(window).height()) {
-            $projectListing.children(':last').css('opacity', '1');
-          }
-        });
-
-        // handles scrolling to display additional projects
-        let $nextProject = $('#projectListing').children(':first');
-        $(window).scroll(function() {
-          if($nextProject.offset() && $nextProject.offset().top < $(this).height() + $(this).scrollTop()) {
-            $nextProject.css('opacity', '1');
-            $nextProject = $nextProject.next();
-          }
-        });
-      });
-    </script>
-  </body>
+        <script src="scripts/jquery-3.4.1.min.js"></script>
+        <script src="scripts/handlebars-v4.1.2.js"></script>
+        <script src="scripts/lightbox.min.js"></script>
+        <script src="scripts/scripts.js"></script>
+    </body>
 </html>

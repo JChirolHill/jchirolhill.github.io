@@ -1,0 +1,202 @@
+[
+    {
+        "title": "Tatoeba Pronunciation & Ear Trainer Chrome Extension",
+        "descr": "Record and playback your voice to compare with native audio.",
+        "img_url": "Assets/TatoebaExtension.png",
+        "github_url": "https://github.com/JChirolHill/TatoebaExtension",
+        "demo_url": "https://youtu.be/V7lLt6mtoxk",
+        "platform": "Web",
+        "langs": ["JavaScript"],
+        "libraries-frameworks": ["Chrome Extension"],
+        "created_at": "Created in Summer 2024",
+        "tags": ["featured", "language-learning"]
+    },
+    {
+        "title": "Chinese Vocab Highlighter by HSK Level",
+        "descr": "Highlight HSK vocabulary in Chinese text based on your HSK proficiency level.",
+        "img_url": "Assets/HSKVocabHighlighter.png",
+        "platform": "Web",
+        "github_url": "https://github.com/JChirolHill/HSKReader",
+        "demo_url": "hsk-vocab-highlighter.surge.sh",
+        "langs": ["JavaScript", "React"],
+        "libraries-frameworks": [],
+        "created_at": "Created in Summer 2022",
+        "tags": ["featured", "language-learning"]
+    },
+    {
+        "title": "AutoCard",
+        "descr": "Automate Anki flash-card creation when learning new words with LINE Chinese dictionary.",
+        "img_url": "Assets/AutoCard.png",
+        "demo_url": "",
+        "platform": "Web",
+        "langs": ["JavaScript"],
+        "libraries-frameworks": ["Bootstrap", "Chrome Extension"],
+        "created_at": "Created in Summer 2021",
+        "tags": ["language-learning"]
+    },
+    {
+        "title": "Emerge italki Chrome Extension",
+        "descr": "Automate copying and pasting corrections onto Emerge website in just one click.",
+        "img_url": "",
+        "demo_url": "",
+        "platform": "Web",
+        "langs": ["JavaScript"],
+        "libraries-frameworks": ["Bootstrap", "Chrome Extension"],
+        "created_at": "Created in Spring 2021",
+        "tags": ["language-learning"]
+    },
+    {
+        "title": "Emerge",
+        "descr": "Rerganize italki.com native corrections line-by-line to efficiently spot your mistakes.",
+        "img_url": "Assets/emerge.png",
+        "demo_url": "",
+        "platform": "Web",
+        "langs": ["JavaScript"],
+        "libraries-frameworks": ["Bootstrap", "React"],
+        "created_at": "Created in Winter 2020",
+        "tags": ["featured", "language-learning"]
+    },
+    {
+        "title": "CSU-Fullerton Virtual Graduate Art Show",
+        "descr": "Virtual version of annual art show for CSU-Fullerton graduate program in a scalable website.",
+        "img_url": "Assets/GradShow.png",
+        "platform": "Web",
+        "langs": ["JavaScript"],
+        "libraries-frameworks": ["Bootstrap", "Lightbox JS"],
+        "created_at": "Created in Summer 2020",
+        "tags": ["featured"]
+    },
+    {
+        "title": "Los Angeles Fire Department - Lifeguard Beach Report",
+        "descr": "Streamline the tracking process of beach conditions and usage reports for the Los Angeles Fire Department Lifeguards.",
+        "img_url": "Assets/LALifeguards.png",
+        "platform": "Web",
+        "langs": ["JavaScript", "PHP"],
+        "libraries-frameworks": ["Bootstrap", "Laravel"],
+        "created_at": "Created in Spring 2020",
+        "tags": []
+    },
+    {
+        "title": "Novel Voices",
+        "descr": "Character-driven story development to bring your characters to life.",
+        "img_url": "Assets/NovelVoices.png",
+        "github_url": "https://github.com/JChirolHill/NovelVoices",
+        "platform": "Web",
+        "langs": ["JavaScript", "PHP"],
+        "libraries-frameworks": [
+            "Bootstrap",
+            "jQuery",
+            "Laravel",
+            "Google Cloud NLP"
+        ],
+        "created_at": "Created in Spring 2020",
+        "tags": ["featured"]
+    },
+    {
+        "title": "Starry Night",
+        "descr": "The sun is setting, but there are no stars in the sky. It is up to you, a small otter, to light up the night sky.",
+        "img_url": "Assets/StarryNight.jpg",
+        "demo_url": "https://www.youtube.com/watch?v=XtMlaz9Fpp8",
+        "github_url": "https://github.com/JChirolHill/StarryNight",
+        "devpost_url": "https://devpost.com/software/starry-night",
+        "platform": "Desktop",
+        "langs": ["Java"],
+        "libraries-frameworks": ["JavaFX"],
+        "created_at": "Created at LA Hacks 2020",
+        "tags": ["game"]
+    },
+    {
+        "title": "One More Light",
+        "descr": "Collect falling stars to help light up your despondent friend.",
+        "img_url": "Assets/OneMoreLight.jpg",
+        "github_url": "https://github.com/JChirolHill/OneMoreLight",
+        "devpost_url": "https://devpost.com/software/one-more-light",
+        "platform": "Desktop",
+        "langs": ["C++"],
+        "libraries-frameworks": ["SDL"],
+        "created_at": "Created at Rose Hacks 2020",
+        "tags": ["featured", "game"]
+    },
+    {
+        "title": "Today in Middle Earth Chrome Extension",
+        "descr": "What happened today in Middle Earth? (Complimentary quote of the day!)",
+        "img_url": "Assets/LotRCal.png",
+        "github_url": "https://github.com/JChirolHill/LotRQuoteCal",
+        "platform": "Web",
+        "langs": ["JavaScript"],
+        "libraries-frameworks": ["Chrome Extension"],
+        "created_at": "Created in Winter 2019",
+        "tags": []
+    },
+    {
+        "title": "MindSpring",
+        "descr": "Challenge your creativity by drawing connections between two disparate elements.  Play alone or challenge your friends!",
+        "img_url": "Assets/MindSpringV2.png",
+        "demo_url": "https://mindspring.surge.sh/",
+        "github_url": "https://github.com/JChirolHill/404_MindSpring",
+        "platform": "Web",
+        "langs": ["JavaScript"],
+        "libraries-frameworks": ["Bootstrap", "React", "Node.js"],
+        "created_at": "Created in Spring 2019",
+        "tags": ["featured", "game"]
+    },
+    {
+        "title": "Toki",
+        "descr": "Get language-learning tips and daily exercises from Toki, the language chatbot.",
+        "img_url": "https://firebasestorage.googleapis.com/v0/b/finalprojectchirolhilljuliette.appspot.com/o/Demo2.png?alt=media&token=3e1e0e3f-98e4-4b06-a1ea-f38b8737cec9",
+        "demo_url": "https://youtu.be/rQ5G9_jBtZE",
+        "github_url": "https://github.com/JChirolHill/Toki",
+        "platform": "Mobile - Android",
+        "langs": ["XML", "Java"],
+        "libraries-frameworks": ["Firebase", "Google Cloud Platform"],
+        "created_at": "Created in Spring 2019",
+        "tags": ["language-learning"]
+    },
+    {
+        "title": "Word2Song",
+        "descr": "Learn words in the context of lyrics to the most popular songs in your target language.",
+        "img_url": "Assets/word2song.png",
+        "github_url": "https://github.com/JChirolHill/Word2Song",
+        "platform": "Web",
+        "langs": ["JavaScript", "PHP"],
+        "libraries-frameworks": ["Bootstrap", "jQuery"],
+        "created_at": "Created in Spring Break 2019",
+        "tags": ["language-learning"]
+    },
+    {
+        "title": "Memory Lane",
+        "descr": "Create and complete scavenger hunts near you.",
+        "img_url": "Assets/MemLane.png",
+        "github_url": "https://github.com/neutonfoo/memorylane",
+        "devpost_url": "https://devpost.com/software/memory-lane-x9uapb",
+        "platform": "Web",
+        "langs": ["JavaScript", "PHP"],
+        "libraries-frameworks": ["Bootstrap", "jQuery"],
+        "created_at": "Created at SB Hacks Spring 2019",
+        "tags": []
+    },
+    {
+        "title": "Spaced Repetition Scheduler",
+        "descr": "Generate a daily study schedules for your semester/quarter courseload using the principles of Ebbinghaus’s Forgetting Curve.",
+        "img_url": "Assets/SRSHome.png",
+        "demo_url": "SpacedRepetition/index.html",
+        "github_url": "https://github.com/JChirolHill/SpacedRepetitionSchedule",
+        "platform": "Web",
+        "langs": ["JavaScript"],
+        "libraries-frameworks": ["Bootstrap", "jQuery"],
+        "created_at": "Created in Winter Break 2018",
+        "tags": ["language-learning"]
+    },
+    {
+        "title": "WeFood",
+        "descr": "Stop wasting time deciding where to eat.  Find nearby restaurants and let friends vote on where to go.",
+        "img_url": "Assets/WeFood.png",
+        "github_url": "https://github.com/neutonfoo/wefood",
+        "devpost_url": "https://devpost.com/software/wefood",
+        "platform": "Web",
+        "langs": ["JavaScript", "PHP"],
+        "libraries-frameworks": ["jQuery"],
+        "created_at": "Created at TrojanHacks Fall 2018",
+        "tags": []
+    }
+]
