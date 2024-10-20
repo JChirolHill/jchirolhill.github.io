@@ -2,7 +2,9 @@
     {
         "title": "Tatoeba Pronunciation & Ear Trainer Chrome Extension",
         "descr": "Record and playback your voice to compare with native audio.",
-        "img_url": "",
+        "img_url": "Assets/TatoebaExtension.png",
+        "github_url": "https://github.com/JChirolHill/TatoebaExtension",
+        "demo_url": "https://youtu.be/V7lLt6mtoxk",
         "platform": "Web",
         "langs": ["JavaScript"],
         "libraries-frameworks": ["Chrome Extension"],
@@ -12,8 +14,10 @@
     {
         "title": "Chinese Vocab Highlighter by HSK Level",
         "descr": "Highlight HSK vocabulary in Chinese text based on your HSK proficiency level.",
-        "img_url": "",
+        "img_url": "Assets/HSKVocabHighlighter.png",
         "platform": "Web",
+        "github_url": "https://github.com/JChirolHill/HSKReader",
+        "demo_url": "hsk-vocab-highlighter.surge.sh",
         "langs": ["JavaScript", "React"],
         "libraries-frameworks": [],
         "created_at": "Created in Summer 2022",
