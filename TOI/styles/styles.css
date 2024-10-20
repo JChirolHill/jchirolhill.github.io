@@ -1,0 +1,89 @@
+:root {
+  --toi-orange: #f16800;
+  --toi-gray: #606060;
+  --toi-gray-light: #808080;
+  --toi-navy: #1B243A;
+  --toi-navy-light: #02304F;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding-bottom: 15vh;
+}
+
+body, a {
+  font-family: 'Muli', sans-serif;
+  color: var(--toi-gray);
+}
+
+a {
+  transition: 0.25s all;
+}
+
+a:hover {
+  color: #000000;
+}
+
+/* Navbar */
+.navbar {
+  border-bottom: 7px solid var(--toi-orange);
+  background-color: white;
+}
+
+.navbar-brand img {
+  width: 250px;
+  margin: 20px 0;
+}
+
+.navbar-collapse {
+  justify-content: flex-end;
+}
+
+nav .active {
+  border-bottom: 4px solid var(--toi-orange);
+  color: var(--toi-gray);
+}
+/* End Navbar */
+
+/* Footer */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--toi-navy);
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: var(--toi-gray-light);
+}
+
+.social-media-icons {
+  font-size: 25px;
+  transition: 0.25s all;
+}
+
+.footer .social-media-icons a:hover {
+  color: white;
+}
+/* End Footer */
+
+/* Fonts */
+.muli-light {
+  font-weight: 300;
+}
+
+.muli-semibold {
+  font-weight: 600;
+}
+
+.muli-bold {
+  font-weight: 700;
+}
+/* End Fonts */

@@ -96,6 +96,12 @@
                                     <a href="{{github_url}}"><i
                                             class="fab fa-github fa-2x"
                                         ></i></a>
+                                {{else}}
+                                    <a
+                                        title="Proprietary code. Github not available."
+                                    ><i
+                                            class="fab fa-github fa-2x github-no-click"
+                                        ></i></a>
                                 {{/if}}
                                 {{#if devpost_url}}
                                     <a

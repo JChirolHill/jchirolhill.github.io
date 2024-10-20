@@ -183,6 +183,11 @@ a:hover {
     text-align: center;
 }
 
+.github-no-click {
+    color: grey;
+    cursor: default;
+}
+
 @media (max-width: 768px) {
     #name {
         font-size: 45px;
