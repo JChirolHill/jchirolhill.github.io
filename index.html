@@ -73,6 +73,11 @@
                 <div class="projectContainer">
                     <div class="projectImg">
                         <a href="{{img_url}}" data-lightbox="{{title}}">
+                            {{#if hackathon}}
+                                <div class="banner-container">
+                                    <div class="banner">{{hackathon}}</div>
+                                </div>
+                            {{/if}}
                             <img src="{{img_url}}" Assets alt="{{title}}" />
                         </a>
                     </div>

@@ -107,6 +107,7 @@
         "langs": ["C++", "SDL"],
         "libraries-frameworks": ["SDL"],
         "created_at": "Created at Rose Hacks 2020",
+        "hackathon": "2nd Place",
         "tags": ["featured", "game"]
     },
     {
@@ -189,6 +190,7 @@
         "langs": ["jQuery", "PHP"],
         "libraries-frameworks": ["jQuery"],
         "created_at": "Created at TrojanHacks Fall 2018",
+        "hackathon": "1st Place",
         "tags": []
     }
 ]
