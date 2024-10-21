@@ -73,6 +73,11 @@
                 <div class="projectContainer">
                     <div class="projectImg">
                         <a href="{{img_url}}" data-lightbox="{{title}}">
+                            {{#if hackathon}}
+                                <div class="banner-container">
+                                    <div class="banner">{{hackathon}}</div>
+                                </div>
+                            {{/if}}
                             <img src="{{img_url}}" Assets alt="{{title}}" />
                         </a>
                     </div>
@@ -87,7 +92,6 @@
                             >
                                 {{#each langs}}<p
                                         class="text-center"
-                                        style="width: 20%;"
                                     >{{this}}</p>{{/each}}
                             </div>
                             <p class="created-text">{{created_at}}</p>
@@ -96,6 +100,12 @@
                                     <a href="{{github_url}}"><i
                                             class="fab fa-github fa-2x"
                                         ></i></a>
+                                {{else}}
+                                    <a
+                                        title="Proprietary code. Github not available."
+                                    ><i
+                                            class="fab fa-github fa-2x github-no-click"
+                                        ></i></a>
                                 {{/if}}
                                 {{#if devpost_url}}
                                     <a
@@ -103,11 +113,16 @@
                                         class="btn btn-redirect devPostBtn"
                                     >Devpost</a>
                                 {{/if}}
+                                {{#if youtube_url}}
+                                    <a href="{{youtube_url}}"><i
+                                            class="fab fa-youtube fa-2x"
+                                        ></i></a>
+                                {{/if}}
                                 {{#if demo_url}}
                                     <a
                                         href="{{demo_url}}"
                                         class="btn btn-redirect demoBtn"
-                                    >Demo</a>
+                                    >Try it!</a>
                                 {{/if}}
                             </div>
                         </div>

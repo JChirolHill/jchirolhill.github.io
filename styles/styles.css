@@ -3,6 +3,7 @@
     --main-dark: #74bdb4;
     --main-darker: #3f8f86;
     --back-grey: #c5d6d3;
+    --banner: #e19421;
 }
 
 html,
@@ -117,7 +118,7 @@ a:hover {
 .projectImg {
     transition: all 0.5s;
     overflow: hidden;
-    height: 250px;
+    height: 240px;
     background-color: #fff;
 }
 
@@ -126,7 +127,7 @@ a:hover {
 }
 
 .btn-redirect {
-    background-color: var(--main-color);
+    background-color: var(--main-darker);
 }
 
 .btn-redirect:hover {
@@ -183,6 +184,23 @@ a:hover {
     text-align: center;
 }
 
+.github-no-click {
+    color: grey;
+    cursor: default;
+}
+
+@media (max-width: 1200px) {
+    .projectImg {
+        height: 199px;
+    }
+}
+
+@media (max-width: 992px) {
+    .projectImg {
+        height: 225px;
+    }
+}
+
 @media (max-width: 768px) {
     #name {
         font-size: 45px;
@@ -191,6 +209,10 @@ a:hover {
 
     .projectContainer .projectDescrSection {
         height: auto;
+    }
+
+    .projectImg {
+        height: 350px;
     }
 }
 
@@ -210,4 +232,53 @@ a:hover {
     #email {
         text-align: center;
     }
+
+    .projectImg {
+        height: 323px;
+    }
 }
+
+/* Banner styles */
+.banner-container {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    &:after {
+        content: "";
+        display: block;
+        width: 10px;
+        height: 5px;
+        background-color: darken(var(--banner), 5%);
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+    }
+    &:before {
+        content: "";
+        display: block;
+        height: 10px;
+        width: 5px;
+        background-color: darken(var(--banner), 5%);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+    }
+}
+
+.banner {
+    width: 200px;
+    padding: 15px;
+    background-color: var(--banner);
+    color: #fff;
+    text-align: center;
+    transform: rotate(-45deg) translate(-28%, -35%);
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.4);
+    text-transform: uppercase;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+}
+/* End Banner Styles */

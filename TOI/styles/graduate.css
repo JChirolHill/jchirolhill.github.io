@@ -1,0 +1,19 @@
+.thumbnail {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  margin: 5px;
+  position: relative;
+}
+
+.thumbnail img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: 0.35s all;
+}
+
+.thumbnail:hover img {
+  cursor: pointer;
+  transform: scale(1.05);
+}
