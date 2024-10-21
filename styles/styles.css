@@ -117,7 +117,7 @@ a:hover {
 .projectImg {
     transition: all 0.5s;
     overflow: hidden;
-    height: 250px;
+    height: 240px;
     background-color: #fff;
 }
 
@@ -126,7 +126,7 @@ a:hover {
 }
 
 .btn-redirect {
-    background-color: var(--main-color);
+    background-color: var(--main-darker);
 }
 
 .btn-redirect:hover {
@@ -188,6 +188,18 @@ a:hover {
     cursor: default;
 }
 
+@media (max-width: 1200px) {
+    .projectImg {
+        height: 199px;
+    }
+}
+
+@media (max-width: 992px) {
+    .projectImg {
+        height: 225px;
+    }
+}
+
 @media (max-width: 768px) {
     #name {
         font-size: 45px;
@@ -196,6 +208,10 @@ a:hover {
 
     .projectContainer .projectDescrSection {
         height: auto;
+    }
+
+    .projectImg {
+        height: 350px;
     }
 }
 
@@ -214,5 +230,9 @@ a:hover {
 
     #email {
         text-align: center;
+    }
+
+    .projectImg {
+        height: 323px;
     }
 }

@@ -87,7 +87,6 @@
                             >
                                 {{#each langs}}<p
                                         class="text-center"
-                                        style="width: 20%;"
                                     >{{this}}</p>{{/each}}
                             </div>
                             <p class="created-text">{{created_at}}</p>
@@ -109,11 +108,16 @@
                                         class="btn btn-redirect devPostBtn"
                                     >Devpost</a>
                                 {{/if}}
+                                {{#if youtube_url}}
+                                    <a href="{{youtube_url}}"><i
+                                            class="fab fa-youtube fa-2x"
+                                        ></i></a>
+                                {{/if}}
                                 {{#if demo_url}}
                                     <a
                                         href="{{demo_url}}"
                                         class="btn btn-redirect demoBtn"
-                                    >Demo</a>
+                                    >Try it!</a>
                                 {{/if}}
                             </div>
                         </div>
