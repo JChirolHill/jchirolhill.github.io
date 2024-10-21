@@ -17,7 +17,7 @@
         "img_url": "Assets/HSKVocabHighlighter.png",
         "platform": "Web",
         "github_url": "https://github.com/JChirolHill/HSKReader",
-        "demo_url": "hsk-vocab-highlighter.surge.sh",
+        "demo_url": "http://hsk-vocab-highlighter.surge.sh",
         "langs": ["React", "Vercel", "Python"],
         "libraries-frameworks": [],
         "created_at": "Created in Summer 2022",
