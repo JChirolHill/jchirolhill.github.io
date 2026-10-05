@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>เวลา 🕐</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;font-family:"Noto Sans Thai","Leelawadee UI","Sarabun",system-ui,sans-serif;color:#2b2d42;background:#ffe9b8;overflow-x:hidden}
+#app{max-width:760px;margin:0 auto;padding:14px;position:relative}
+.bar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;justify-content:space-between;margin-bottom:10px}
+.stat{background:#fff;border-radius:30px;padding:6px 14px;font-weight:800;font-size:1.1rem;box-shadow:0 4px 0 #0001}
+.title{display:flex;align-items:center;gap:6px}.emj{font-size:1.8rem}
+.seg{display:flex;background:#fff;border-radius:40px;padding:4px;box-shadow:0 4px 0 #0001;gap:4px}
+.seg button{border:0;background:transparent;border-radius:36px;padding:6px 12px;cursor:pointer;font:inherit;display:flex;align-items:center;gap:6px;color:#555;font-size:1.3rem}
+.seg button.on{background:#ff5fa2;color:#fff}
+.seg button:focus-visible,.big:focus-visible,.opt:focus-visible{outline:4px solid #4361ee}
+.lab{display:flex;flex-direction:column;align-items:center;line-height:1.1}.lab b{font-size:1rem}.lab i{font-size:.68rem;font-style:normal;opacity:.9}
+.card{background:#ffffffcc;border-radius:28px;padding:12px;box-shadow:0 8px 0 #0001;text-align:center}
+.sky{border-radius:20px;padding:8px 14px;position:relative;display:inline-block;box-shadow:inset 0 0 0 4px #fff8}
+.sky .emo{position:absolute;top:6px;right:12px;font-size:2.4rem}
+.dig{font-weight:900;font-size:1.8rem;letter-spacing:2px;color:#fff;text-shadow:0 3px 0 #0003}
+.ph{display:flex;flex-wrap:wrap;justify-content:center;margin:8px 0}
+.chip{display:inline-flex;flex-direction:column;align-items:center;padding:4px 10px;border-radius:14px;margin:3px;line-height:1.2}
+.chip b{font-size:1.7rem}.chip i{font-size:.82rem;font-style:normal}
+.g0{background:#ffe0ee;color:#b0125b}.g1{background:#d4f5f0;color:#0a6f64}.g2{background:#fff;color:#b0125b}.noipa .chip i,.noipa .lab i{display:none}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+.opt{border:4px solid #fff;border-radius:22px;background:#fff;padding:6px;cursor:pointer;font:inherit;box-shadow:0 5px 0 #0002;display:flex;align-items:center;justify-content:center;flex-direction:column;color:inherit}
+.opt:hover:not(:disabled){border-color:#ff9f1c}
+.opt .chip b{font-size:1.2rem}.opt .chip i{font-size:.7rem}
+.opt .dig{color:#4361ee;text-shadow:none;font-size:1.5rem}
+.opt.right{border-color:#2ec4b6;background:#d9fff7}
+.opt.wrong{border-color:#ff4d6d;background:#ffe3e8}
+.opt:disabled{cursor:default}
+.big{font-size:1.6rem;border:0;border-radius:50%;width:58px;height:58px;margin:3px;cursor:pointer;box-shadow:0 6px 0 #0002;background:#ffb703}
+.big:hover{background:#ff9f1c}
+.big.ok{background:#2ec4b6}.big.no{background:#ff4d6d}.big.nx{background:#7b6cf6}
+.warn{background:#fff3cd;border-radius:18px;padding:2px 10px;display:flex;align-items:center;justify-content:center;margin-bottom:8px}
+.fb{font-size:1.2rem;font-weight:800;display:flex;justify-content:center;align-items:center;gap:8px}
+.top{display:flex;flex-direction:column;align-items:center;gap:6px}
+.side{display:flex;flex-direction:column;align-items:center;justify-content:flex-start}
+.sw{display:flex;align-items:center;gap:8px;background:#fff;border:0;border-radius:40px;padding:6px 14px;font:inherit;font-weight:800;font-size:1.05rem;cursor:pointer;box-shadow:0 4px 0 #0001;color:#555}
+.trk{width:44px;height:24px;border-radius:12px;background:#b8b8c0;position:relative;display:inline-block}
+.knob{position:absolute;top:3px;left:3px;width:18px;height:18px;border-radius:50%;background:#fff}
+.sw.on{color:#0a6f64}.sw.on .trk{background:#2ec4b6}.sw.on .knob{left:23px}
+.ibtn{border:0;background:#fff;border-radius:50%;width:42px;height:42px;font-size:1.3rem;cursor:pointer;box-shadow:0 4px 0 #0001}
+.seg button.f{font-size:1rem;font-weight:800;padding:6px 12px}
+#start{position:fixed;inset:0;z-index:20;background:#ffe9b8;display:flex;align-items:center;justify-content:center;padding:14px;overflow:auto}
+.intro{background:#fff;border-radius:28px;padding:22px;max-width:520px;text-align:center;box-shadow:0 8px 0 #0001;line-height:1.45}
+.intro p{margin:8px 0}
+#info{position:fixed;inset:0;z-index:30;background:#000a;display:none;align-items:center;justify-content:center;padding:14px}
+.sheet{background:#fff;border-radius:24px;padding:18px;max-width:680px;width:100%;max-height:92vh;overflow:auto;text-align:left;line-height:1.4;position:relative}
+.sheet h3{margin:0 0 6px}.sheet p{margin:6px 0}
+.ir{display:flex;gap:10px;align-items:center;flex-wrap:wrap;border-top:2px solid #f0e6d0;padding:4px 0}
+.ir .w{min-width:78px;font-weight:800}.ir .pt{flex:1;display:flex;align-items:center;flex-wrap:wrap;gap:4px;min-width:200px}
+.x{position:absolute;top:8px;right:10px;border:0;background:#ff4d6d;color:#fff;border-radius:50%;width:36px;height:36px;font-size:1.1rem;cursor:pointer}
+</style></head><body>
+<div id="start"><div class="intro">
+  <span class="chip g0" style="transform:scale(1.5);margin:16px"><b>เวลา</b><i>weː.laː</i></span>
+  <p><b>Practice telling the time in Thai.</b></p>
+  <p>👀 <b>Recognition</b>: listen to a time, then pick the matching clock time.</p>
+  <p>🧠 <b>Recall</b>: look at a time, then pick its Thai phrase. Keep trying until you find it, and it is read aloud.</p>
+  <p>Every Thai word comes with IPA (you can hide it). Tap ℹ️ for a quick guide to how Thai tells the time. Turn your sound on!</p>
+  <button class="big" id="go" style="width:90px;height:90px;font-size:2.8rem">▶</button>
+</div></div>
+<div id="info"><div class="sheet"><button class="x" id="ix">✖</button><div id="ib2"></div></div></div>
+<div id="app">
+  <div id="warn"></div>
+  <div class="bar">
+    <div class="title"><span class="emj">🕐</span><span class="chip g2"><b>เวลา</b><i>weː.laː</i></span></div>
+    <div style="display:flex;gap:8px;align-items:center"><div class="stat" id="st"></div><div class="stat" id="ac"></div><button class="ibtn" id="ib">ℹ️</button></div>
+  </div>
+  <div class="bar">
+    <div class="seg">
+      <button data-m="recog">👀<span class="lab"><b>ตัวเลือก</b><i>tua lɯ̂ak</i></span></button>
+      <button data-m="recall">🧠<span class="lab"><b>นึกเอง</b><i>nɯ́k ʔeːŋ</i></span></button>
+    </div>
+    <div class="seg"><button data-l="1">🌱</button><button data-l="2">🌿</button><button data-l="3">🌳</button></div>
+    <button class="sw on" id="ipab" role="switch" aria-checked="true"><span class="trk"><span class="knob"></span></span>IPA</button>
+    <div class="seg"><button class="f" data-f="24">24h</button><button class="f" data-f="12">12h</button></div>
+  </div>
+  <div class="card" id="stage"></div>
+</div>
+<script>
+const $=s=>document.querySelector(s),$$=s=>document.querySelectorAll(s);
+const fmt=(h,m)=>S.fmt===24?`${pad(h)}:${pad(m)}`:`${h%12||12}:${pad(m)} ${h<12?'AM':'PM'}`;
+const rnd=n=>Math.floor(Math.random()*n),pad=n=>String(n).padStart(2,'0');
+const W={1:['หนึ่ง','nɯ̀ŋ'],2:['สอง','sɔ̌ːŋ'],3:['สาม','sǎːm'],4:['สี่','sìː'],5:['ห้า','hâː'],6:['หก','hòk'],7:['เจ็ด','tɕèt'],8:['แปด','pɛ̀ːt'],9:['เก้า','kâːw'],10:['สิบ','sìp'],
+'ยี่':['ยี่','jîː'],'เอ็ด':['เอ็ด','ʔèt'],'ตี':['ตี','tiː'],'โมง':['โมง','moːŋ'],'เช้า':['เช้า','tɕʰáːw'],'เย็น':['เย็น','jen'],'บ่าย':['บ่าย','bàːj'],'ทุ่ม':['ทุ่ม','tʰûm'],
+'เที่ยง':['เที่ยง','tʰîaŋ'],'เที่ยงคืน':['เที่ยงคืน','tʰîaŋ kʰɯːn'],'ครึ่ง':['ครึ่ง','kʰrɯ̂ŋ'],'นาที':['นาที','naːtʰiː']};
+const mk=(k,g)=>({th:W[k][0],ipa:W[k][1],g});
+const WARN=[['ไม่','mâj'],['พบ','pʰóp'],['เสียง','sǐaŋ'],['ภาษาไทย','pʰaː.sǎː tʰaj']].map(([th,ipa])=>({th,ipa,g:0}));
+const chips=tk=>`<span class="ph">${tk.map(t=>`<span class="chip g${t.g}"><b>${t.th}</b><i>${t.ipa}</i></span>`).join('')}</span>`;
+const lab=(a,b)=>`<span class="lab"><b>${a}</b><i>${b}</i></span>`;
+
+function num(n,g){const t=[],p=k=>t.push(mk(k,g));
+  if(n<=10){p(n);return t}
+  const d=Math.floor(n/10),u=n%10;
+  if(d===1)p(10);else{p(d===2?'ยี่':d);p(10)}
+  if(u===1)p('เอ็ด');else if(u>1)p(u);
+  return t}
+function phrase(h,m){
+  const a=[],p=k=>a.push(mk(k,0)),n=x=>a.push(...num(x,0));
+  if(h===0)p('เที่ยงคืน');
+  else if(h<6){p('ตี');n(h)}
+  else if(h<12){n(h);p('โมง');p('เช้า')}
+  else if(h===12)p('เที่ยง');
+  else if(h<17){p('บ่าย');if(h>13)n(h-12);p('โมง')}
+  else if(h<19){n(h-12);p('โมง');p('เย็น')}
+  else{n(h-18);p('ทุ่ม')}
+  if(m===30)a.push(mk('ครึ่ง',1));
+  else if(m>0)a.push(...num(m,1),mk('นาที',1));
+  return a}
+
+function sky(h){
+  if(h<5||h>=20)return['🌙','#3b3a8f'];
+  if(h<7)return['🌅','#ff7fa8'];
+  if(h<12)return['☀️','#4895ef'];
+  if(h<14)return['🌞','#f5a400'];
+  if(h<17)return['🌤️','#f77f00'];
+  return['🌇','#b05fd6']}
+function clock(h,m,sz,mini){
+  const C=['#ff5fa2','#ff9f1c','#2ec4b6','#4361ee','#7b2ff7'];
+  let s=`<svg viewBox="0 0 200 200" width="${sz}" height="${sz}"><circle cx="100" cy="100" r="95" fill="#fff" stroke="#4361ee" stroke-width="7"/>`;
+  for(let i=1;i<=12;i++){const a=i*Math.PI/6,x=100+72*Math.sin(a),y=100-72*Math.cos(a);
+    s+=mini?`<circle cx="${x}" cy="${y}" r="6" fill="${C[i%5]}"/>`:`<text x="${x}" y="${y+8}" text-anchor="middle" font-size="24" font-weight="800" fill="${C[i%5]}">${i}</text>`}
+  const hand=(d,l,w,c)=>{const r=d*Math.PI/180;return`<line x1="100" y1="100" x2="${100+l*Math.sin(r)}" y2="${100-l*Math.cos(r)}" stroke="${c}" stroke-width="${w}" stroke-linecap="round"/>`};
+  return s+hand((h%12)*30+m/2,44,10,'#ff5fa2')+hand(m*6,66,6,'#2ec4b6')+'<circle cx="100" cy="100" r="8" fill="#2b2d42"/></svg>'}
+
+/* ---------- audio ---------- */
+let voice=null,hasTH=false,ac,keep,au=new Audio();
+const stat=t=>{$('#warn').innerHTML=t==='🔇'?`<div class="warn">🔇 ${chips(WARN)}</div>`:''};
+function pickVoice(){
+  const vs=window.speechSynthesis?speechSynthesis.getVoices():[];
+  voice=vs.find(v=>v.lang.replace('_','-').toLowerCase().startsWith('th'))||null;hasTH=!!voice;
+  stat(hasTH?'🔊 '+voice.name:'🌐')}
+if(window.speechSynthesis){speechSynthesis.onvoiceschanged=pickVoice;speechSynthesis.getVoices()}
+let tries=0;const vt=setInterval(()=>{pickVoice();if(hasTH||++tries>20)clearInterval(vt)},300);
+const sayText=()=>S.ph.map((o,i)=>(i&&o.g!==S.ph[i-1].g?' ':'')+o.th).join('');
+/* fallback: online Thai voice, played through a normal audio element */
+function online(text){
+  try{speechSynthesis.cancel()}catch(e){}
+  au.pause();
+  au.onerror=()=>stat('🔇');
+  au.src='https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=th&q='+encodeURIComponent(text);
+  au.play().then(()=>stat('🌐')).catch(()=>stat('🔇'))}
+function speak(){
+  if(!S.ph)return;
+  const text=sayText();pickVoice();
+  if(!window.speechSynthesis||!voice){online(text);return}   // no Thai voice in this browser
+  const u=new SpeechSynthesisUtterance(text);let started=false;
+  u.lang='th-TH';u.voice=voice;u.rate=.85;u.volume=1;
+  u.onstart=()=>{started=true;stat('🔊 '+voice.name)};
+  u.onerror=ev=>{if(!started&&ev.error!=='canceled'&&ev.error!=='interrupted')online(text)};
+  keep=u;au.pause();
+  speechSynthesis.cancel();
+  setTimeout(()=>{speechSynthesis.resume();speechSynthesis.speak(u)},80);
+  setTimeout(()=>{if(!started&&keep===u){online(text)}},3000)}   // browser voice never started -> fall back
+function beep(ok){try{ac=ac||new AudioContext();(ok?[660,880]:[220,170]).forEach((f,i)=>{
+  const o=ac.createOscillator(),g=ac.createGain(),s=ac.currentTime+i*.12;
+  o.type='triangle';o.frequency.value=f;o.connect(g);g.connect(ac.destination);
+  g.gain.setValueAtTime(.15,s);g.gain.exponentialRampToValueAtTime(.001,s+.2);o.start(s);o.stop(s+.2)})}catch(e){}}
+
+/* ---------- game ---------- */
+const S={mode:'recog',fmt:24,level:2,score:0,streak:0,ok:0,tot:0};
+function rndTime(){const h=rnd(24);let m=0;
+  if(S.level===2)m=[0,15,30,45][rnd(4)];if(S.level===3)m=rnd(12)*5;return{h,m}}
+function options(t){
+  const k=o=>phrase(o.h,o.m).map(x=>x.th).join(''),M=new Map([[k(t),t]]);
+  for(let g=0;M.size<4&&g<99;g++){const c=rndTime(),r=Math.random();if(r<.4)c.m=t.m;else if(r<.7)c.h=t.h;M.set(k(c),c)}
+  return[...M.values()].sort(()=>Math.random()-.5)}
+function next(){
+  if(window.speechSynthesis)speechSynthesis.cancel();au.pause();
+  let t;do t=rndTime();while(S.t&&t.h===S.t.h&&t.m===S.t.m);
+  Object.assign(S,{t,ph:phrase(t.h,t.m),done:0,tried:0,bad:[]});
+  S.type=S.mode==='recall'?'c2t':'t2c';   // recognition: hear it, pick the time; recall: see the time, pick the Thai
+  S.opts=options(t);S.ans=S.opts.findIndex(o=>o.h===t.h&&o.m===t.m);
+  render();if(S.type==='t2c')setTimeout(speak,250)}
+const audioBtns=()=>`<div><button class="big" data-a="spk">🔊</button></div>`;
+function render(){
+  const t=S.t,T=S.type,bg=sky(t.h)[1];
+  const left=T==='t2c'?'':`<div class="sky" style="background:${bg}">${clock(t.h,t.m,140)}<div class="dig">${fmt(t.h,t.m)}</div></div>`;
+  let side='';
+  if(S.done){
+    const good=T==='c2t'||!S.bad.length;
+    side+=`<div class="fb">${good?'✅ '+lab('ถูก','tʰùːk'):'❌ '+lab('ผิด','pʰìt')}</div>`;
+    if(T==='t2c')side+=chips(S.ph)}
+  side+=`<div>${T==='t2c'||S.done?'<button class="big" data-a="spk">🔊</button>':''}${S.done?'<button class="big nx" data-a="next">➡️</button>':''}</div>`;
+  let h=`<div class="top">${left}<div class="side" style="min-height:${T==='t2c'?150:100}px">${side}</div></div><div class="opts">`+S.opts.map((o,i)=>{
+    const bad=S.bad.includes(i),c=bad?'wrong':(S.done&&i===S.ans?'right':'');
+    const inner=T==='c2t'?chips(phrase(o.h,o.m)):`<div class="dig">${fmt(o.h,o.m)}</div>`;
+    return`<button class="opt ${c}" data-a="pick" data-i="${i}" ${S.done||bad?'disabled':''}>${inner}</button>`}).join('')+`</div>`;
+  $('#stage').innerHTML=h}
+function stats(){$('#st').textContent='🔥 '+S.streak;$('#ac').textContent=`✅ ${S.ok}/${S.tot}`}
+function grade(ok){S.tot++;if(ok){S.ok++;S.streak++;S.score+=10+Math.min(S.streak,5)*2;}else S.streak=0;beep(ok);stats()}
+function act(a,i){
+  if(a==='spk')speak();
+  else if(a==='pick'&&!S.done&&S.opts[i]&&!S.bad.includes(i)){
+    const right=i===S.ans;
+    if(!S.tried){S.tried=1;grade(right)}else beep(right);   // only the first attempt is scored
+    if(!right)S.bad.push(i);
+    if(right||S.type==='t2c')S.done=1;
+    render();
+    if(right&&S.type==='c2t')speak()}              // recall: read the correct answer aloud once found
+  else if(a==='next'&&S.done)next()}
+$('#stage').onclick=e=>{const b=e.target.closest('[data-a]');if(b&&!b.disabled)act(b.dataset.a,+b.dataset.i)};
+document.onkeydown=e=>{if(e.key==='Escape')$('#info').style.display='none';if($('#start').style.display==='none'&&$('#info').style.display!=='flex'){const k=e.key;
+  if(k>='1'&&k<='4')act('pick',+k-1);
+  else if(k==='Enter'||k===' '){e.preventDefault();act('next')}
+  if(k==='r'||k==='R')speak()}};
+const sync=()=>{$$('[data-m]').forEach(b=>b.classList.toggle('on',b.dataset.m===S.mode));$$('[data-l]').forEach(b=>b.classList.toggle('on',+b.dataset.l===S.level));$$('[data-f]').forEach(b=>b.classList.toggle('on',+b.dataset.f===S.fmt))};
+$$('[data-m]').forEach(b=>b.onclick=()=>{S.mode=b.dataset.m;sync();next()});
+$$('[data-l]').forEach(b=>b.onclick=()=>{S.level=+b.dataset.l;sync();next()});
+$('#ipab').onclick=()=>{const off=document.body.classList.toggle('noipa');$('#ipab').classList.toggle('on',!off);$('#ipab').setAttribute('aria-checked',!off)};
+$$('[data-f]').forEach(b=>b.onclick=()=>{S.fmt=+b.dataset.f;sync();render()});
+function openInfo(){
+  const ex=(h,m)=>chips(phrase(h,m)),mkc=k=>chips([mk(k,0)]);
+  const row=(w,parts,e)=>`<div class="ir"><span class="w">${w}</span><span class="pt">${parts.map(p=>p.startsWith('<')?p:`<span>${p}</span>`).join('')}</span>${e}</div>`;
+  $('#ib2').innerHTML=`<h3>How Thai tells the time</h3>
+  <p>Thai has no am/pm. The day is cut into periods, and you count the hours <i>within</i> each period (like "the 3rd hour of the night"), then add a period word.</p>`+
+  row('1–5 am',[mkc('ตี'),'+ hour (1–5)'],ex(3,0))+
+  row('6–11 am',['hour (6–11) +',mkc('โมง'),'+',mkc('เช้า')],ex(8,0))+
+  row('noon',[mkc('เที่ยง')],ex(12,0))+
+  row('1–4 pm',[mkc('บ่าย'),'+ hour (2–4) +',mkc('โมง'),'(1 pm drops the number)'],ex(15,0))+
+  row('5–6 pm',['hour (5–6) +',mkc('โมง'),'+',mkc('เย็น')],ex(17,0))+
+  row('7–11 pm',['hour (1–5) +',mkc('ทุ่ม'),'(7 pm = 1, 8 pm = 2 … 11 pm = 5)'],ex(21,0))+
+  row('midnight',[mkc('เที่ยงคืน')],ex(0,0))+
+  `<p><b>Minutes</b> come after the hour: number + ${mkc('นาที')}. Half past is ${mkc('ครึ่ง')}.</p>`+
+  row('9:15',[],ex(9,15))+row('9:30',[],ex(9,30))+row('9:45',[],ex(9,45))+
+  `<p><b>Numbers</b> 1–10:</p>${chips([1,2,3,4,5,6,7,8,9,10].flatMap(n=>num(n,2)))}
+  <p>11 is ten-one, 20 is two-ten, 21 is two-ten-one, 45 is four-ten-five:</p>${chips([...num(11,2),{th:'·',ipa:'',g:2},...num(20,2),{th:'·',ipa:'',g:2},...num(21,2),{th:'·',ipa:'',g:2},...num(45,2)])}`;
+  $('#info').style.display='flex'}
+$('#ib').onclick=openInfo;
+$('#ix').onclick=()=>$('#info').style.display='none';
+$('#info').onclick=e=>{if(e.target.id==='info')$('#info').style.display='none'};
+$('#go').onclick=()=>{$('#start').style.display='none';pickVoice();stats();sync();next()};
+pickVoice();
+</script></body></html>

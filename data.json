@@ -1,5 +1,17 @@
 [
     {
+        "title": "Thai Telling the Time",
+        "descr": "Learn and practice telling the time in Thai (Created with AI).",
+        "img_url": "Assets/ThaiTime.png",
+        "github_url": "https://github.com/JChirolHill/Thai-Time",
+        "demo_url": "ThaiTime",
+        "platform": "Web",
+        "langs": ["JavaScript"],
+        "libraries-frameworks": ["Claude AI"],
+        "created_at": "Created in Fall 2026",
+        "tags": ["featured", "language-learning"]
+    },
+    {
         "title": "Tatoeba Pronunciation & Ear Trainer Chrome Extension",
         "descr": "Record and playback your voice to compare with native audio.",
         "img_url": "Assets/TatoebaExtension.png",
