@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>เวลา 🕐</title>
 <style>
-*{box-sizing:border-box}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+button{touch-action:manipulation}
 body{margin:0;min-height:100vh;font-family:"Noto Sans Thai","Leelawadee UI","Sarabun",system-ui,sans-serif;color:#2b2d42;background:#ffe9b8;overflow-x:hidden}
 #app{max-width:760px;margin:0 auto;padding:14px;position:relative}
 .bar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;justify-content:space-between;margin-bottom:10px}
@@ -41,10 +42,10 @@ body{margin:0;min-height:100vh;font-family:"Noto Sans Thai","Leelawadee UI","Sar
 .sw.on{color:#0a6f64}.sw.on .trk{background:#2ec4b6}.sw.on .knob{left:23px}
 .ibtn{border:0;background:#fff;border-radius:50%;width:42px;height:42px;font-size:1.3rem;cursor:pointer;box-shadow:0 4px 0 #0001}
 .seg button.f{font-size:1rem;font-weight:800;padding:6px 12px}
-#start{position:fixed;inset:0;z-index:20;background:#ffe9b8;display:flex;align-items:center;justify-content:center;padding:14px;overflow:auto}
+#start{position:fixed;top:0;left:0;right:0;bottom:0;z-index:20;background:#ffe9b8;display:flex;align-items:center;justify-content:center;padding:14px;overflow:auto}
 .intro{background:#fff;border-radius:28px;padding:22px;max-width:520px;text-align:center;box-shadow:0 8px 0 #0001;line-height:1.45}
 .intro p{margin:8px 0}
-#info{position:fixed;inset:0;z-index:30;background:#000a;display:none;align-items:center;justify-content:center;padding:14px}
+#info{position:fixed;top:0;left:0;right:0;bottom:0;z-index:30;background:#000a;display:none;align-items:center;justify-content:center;padding:14px}
 .sheet{background:#fff;border-radius:24px;padding:18px;max-width:680px;width:100%;max-height:92vh;overflow:auto;text-align:left;line-height:1.4;position:relative}
 .sheet h3{margin:0 0 6px}.sheet p{margin:6px 0}
 .ir{display:flex;gap:10px;align-items:center;flex-wrap:wrap;border-top:2px solid #f0e6d0;padding:4px 0}
@@ -149,8 +150,8 @@ function speak(){
   u.onstart=()=>{started=true;stat('🔊 '+voice.name)};
   u.onerror=ev=>{if(!started&&ev.error!=='canceled'&&ev.error!=='interrupted')online(text)};
   keep=u;au.pause();
-  speechSynthesis.cancel();
-  setTimeout(()=>{speechSynthesis.resume();speechSynthesis.speak(u)},80);
+  const go=()=>{speechSynthesis.resume();speechSynthesis.speak(u)};
+  if(speechSynthesis.speaking||speechSynthesis.pending){speechSynthesis.cancel();setTimeout(go,80)}else go();
   setTimeout(()=>{if(!started&&keep===u){online(text)}},3000)}   // browser voice never started -> fall back
 function beep(ok){try{ac=ac||new AudioContext();(ok?[660,880]:[220,170]).forEach((f,i)=>{
   const o=ac.createOscillator(),g=ac.createGain(),s=ac.currentTime+i*.12;
@@ -229,6 +230,9 @@ function openInfo(){
 $('#ib').onclick=openInfo;
 $('#ix').onclick=()=>$('#info').style.display='none';
 $('#info').onclick=e=>{if(e.target.id==='info')$('#info').style.display='none'};
-$('#go').onclick=()=>{$('#start').style.display='none';pickVoice();stats();sync();next()};
+const SILENT='data:audio/wav;base64,UklGRigAAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAAABkYXRhAgAAAAEA';
+$('#go').onclick=()=>{$('#start').style.display='none';
+  try{if(window.speechSynthesis){const u=new SpeechSynthesisUtterance(' ');u.volume=0;speechSynthesis.speak(u)}au.src=SILENT;const pr=au.play();if(pr&&pr.catch)pr.catch(()=>{})}catch(e){}
+  pickVoice();stats();sync();next()};
 pickVoice();
 </script></body></html>
